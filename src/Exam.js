@@ -15,7 +15,7 @@ class Exam extends Component {
         btnNext: true,
         btnCheckAnser: false,
 
-        minute: 0,
+        minute: 9,
         sec: 59,
         colorBar: 'danger',
         showText: false
@@ -162,7 +162,7 @@ class Exam extends Component {
     }
     checkBar = () => {
         let bar = this.checkCount()
-        if ((bar * 100) / this.state.examLists.length >= 80) this.setState({ colorBar: 'success' })
+        if ((bar * 100) / this.state.examLists.length >= 80) this.setState({ colorBar: 'info' })
         else if ((bar * 100) / this.state.examLists.length >= 45) this.setState({ colorBar: 'warning' })
         else this.setState({ colorBar: 'danger' })
     }
@@ -200,13 +200,13 @@ class Exam extends Component {
 /////////////////////////////////////// END FUNCTION ////////////////////////////////////////////////////////////
     render() {
         return(
-            <Container style={{marginTop:"120px"}}>
+            <Container className="containBox">
                 {
                 this.state.waitData ? /// ถ้าโหลดข้อมูลเสร็จแล้วให้แสดง
                 <div>
                     <Row>
                         <Col>
-                            <p style={{ fontSize: "20px", fontWeight: 800, margin: "3px", color: "#b7996c" }} className="text-center">
+                            <p style={{ fontSize: "20px", fontWeight: 800, margin: "3px", color: "#627498" }} className="text-center">
                                 {
                                     this.state.minute !== 0 ? 'เวลา ' + this.changeZeroSec(this.state.minute) + ' : ' + this.changeZeroSec(this.state.sec) + ' นาที'
                                         : this.state.sec !== 0 ? 'เวลา ' + this.changeZeroSec(this.state.sec) + ' วินาที' : 'หมดเวลา'
@@ -229,7 +229,7 @@ class Exam extends Component {
                             {
                                 this.state.btnPrev ? // ถ้าเป็นจริงให้แสดง
                                     <div onClick={() => this.setArr('prev')} style={{ cursor: "pointer" }}>
-                                        <svg style={{ color: "#b7996c" }} className="bi bi-arrow-left" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <svg style={{ color: "#5b785b" }} className="bi bi-arrow-left" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fillRule="evenodd" d="M5.854 4.646a.5.5 0 010 .708L3.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clipRule="evenodd" />
                                             <path fillRule="evenodd" d="M2.5 8a.5.5 0 01.5-.5h10.5a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clipRule="evenodd" />
                                         </svg>
@@ -240,7 +240,7 @@ class Exam extends Component {
                         <Col xs="8" className="text-center">
                             {
                                 this.state.btnCheckAnser // ถ้าตอบครบแล้วให้แสดงปุ่มตรวจคำตอบ
-                                    ? <Button variant="outline-success" className="btnFull" onClick={this.checkAnswer}>ตรวจคำตอบ</Button>
+                                    ? <Button variant="outline-info" className="btnFull" onClick={this.checkAnswer}>ตรวจคำตอบ</Button>
                                     : null // ถ้าตอบไม่ครบให้ซ่อน
                             }
                         </Col>
@@ -248,7 +248,7 @@ class Exam extends Component {
                             {
                                 this.state.btnNext ? // ถ้าเป็นจริงให้แสดง
                                     <div onClick={() => this.setArr('next')} style={{ cursor: "pointer" }}>
-                                        <svg style={{ color: "#b7996c" }} className="bi bi-arrow-right" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <svg style={{ color: "#5b785b" }} className="bi bi-arrow-right" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fillRule="evenodd" d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z" clipRule="evenodd" />
                                             <path fillRule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z" clipRule="evenodd" />
                                         </svg>
@@ -266,7 +266,8 @@ class Exam extends Component {
                                 <Spinner animation="grow" variant="info" />
                                 <Spinner animation="grow" variant="danger" />
                                 <Spinner animation="grow" variant="warning" />
-                                <p style={{ fontSize: "16px" }}>{this.state.showText ? 'ไม่พบข้อมูล' : 'กรุณารอสักครู่'}</p>
+
+                                <p style={{ fontSize: "16px", marginTop:"10px" }}>{this.state.showText ? 'ไม่พบข้อมูล' : 'กรุณารอสักครู่'}</p>
                             </Col>
                         </Row>
                 }

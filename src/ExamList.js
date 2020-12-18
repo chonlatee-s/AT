@@ -20,40 +20,40 @@ class ExamList extends Component {
     }
 
     render() {
-        let s1,s2,s3,s4 = { color : '#627498' }
+        let s1,s2,s3,s4 = { color : '#5b785b' }
         if(this.props.questionAll.reply === '1'){
-            s1 = {color:'#b7996c'}
-            s2 = {color:'#627498'}
-            s3 = {color:'#627498'}
-            s4 = {color:'#627498'}
+            s1 = {color:'#eb5749'}
+            s2 = {color:'#5b785b'}
+            s3 = {color:'#5b785b'}
+            s4 = {color:'#5b785b'}
         }else if(this.props.questionAll.reply === '2'){
-            s1 = {color:'#627498'}
-            s2 = {color:'#b7996c'}
-            s3 = {color:'#627498'}
-            s4 = {color:'#627498'}
+            s1 = {color:'#5b785b'}
+            s2 = {color:'#eb5749'}
+            s3 = {color:'#5b785b'}
+            s4 = {color:'#5b785b'}
         }
         else if(this.props.questionAll.reply === '3'){
-            s1 = {color:'#627498'}
-            s2 = {color:'#627498'}
-            s3 = {color:'#b7996c'}
-            s4 = {color:'#627498'}
+            s1 = {color:'#5b785b'}
+            s2 = {color:'#5b785b'}
+            s3 = {color:'#eb5749'}
+            s4 = {color:'#5b785b'}
         }
         else if(this.props.questionAll.reply === '4'){
-            s1 = {color:'#627498'}
-            s2 = {color:'#627498'}
-            s3 = {color:'#627498'}
-            s4 = {color:'#b7996c'}
+            s1 = {color:'#5b785b'}
+            s2 = {color:'#5b785b'}
+            s3 = {color:'#5b785b'}
+            s4 = {color:'#eb5749'}
         }
         else{
-            s1 = {color:'#627498'}
-            s2 = {color:'#627498'}
-            s3 = {color:'#627498'}
-            s4 = {color:'#627498'}
+            s1 = {color:'#5b785b'}
+            s2 = {color:'#5b785b'}
+            s3 = {color:'#5b785b'}
+            s4 = {color:'#5b785b'}
         }
 
         return (
             <ListGroup variant="flush">
-                <ListGroup.Item  style={{backgroundColor:"#f9f7f3", color:"#b7996c"}}><span style={{fontWeight:500, fontSize:"18px"}}>ข้อ { this.props.number+1 } { this.props.questionAll.question }</span></ListGroup.Item>
+                <ListGroup.Item  style={{backgroundColor:"#697f69", color:"#fff"}}><span style={{fontWeight:500, fontSize:"18px"}}>ข้อ { this.props.number+1 } { this.props.questionAll.question }</span></ListGroup.Item>
                     <ListGroup.Item  style={{cursor:"pointer", fontWeight:300}} id="1" onClick = { this.mange } action as="div">
                         <span style={s1}>ก. { this.props.questionAll.ch1 }</span>
                     </ListGroup.Item>

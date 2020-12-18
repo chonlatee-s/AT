@@ -1,46 +1,45 @@
 import React, { Component } from 'react'
-import {Container, Row, Col, Card, CardDeck} from 'react-bootstrap'
+import {Container, Row, Col, Card, CardDeck, Alert, Badge} from 'react-bootstrap'
 class Plans extends Component {
     render() {
         return(
-            <div style={{marginTop:"120px"}}>
+            <div className="containBox">
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col xs="auto"><h5>ขั้นตอนที่ 1 เลือกแพลน</h5></Col>
+                    <Col xs="auto"><h5 className="topic">ขั้นตอนที่ 1 เลือกแพลน</h5></Col>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col mx="auto">
                         <CardDeck>
-                            <Card>
+                            <Card className="cardPlan1">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 1 แบ่งปันความรู้ (ใช้งานฟรี)</Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 1 ใช้งานฟรี</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard">- ข้อสอบคอมพิวเตอร์ 1-50 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ 1-30 ข้อ</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
                                     <small className="price">ราคา 0 บาท</small>
                                 </Card.Footer>
                             </Card>
-                            <Card>
+                            <Card className="cardPlan2">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 2 ช่วยค่ากาแฟ</Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 2</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard">- ข้อสอบคอมพิวเตอร์ 1-500 ข้อ</p>
-                                        <p className="txtCard">- ดาวน์โหลดเอกสารต่าง ๆ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ 1-500 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
                                     <small className="price">ราคา 49 บาท</small>
                                 </Card.Footer>
                             </Card>
-                            <Card>
+                            <Card className="cardPlan3">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 3 เก็บแรงแต่งงาน (คุ้มมาก แนะนำ)</Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 3 &nbsp;&nbsp;<Badge pill variant="warning">แนะนำ</Badge></Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard">- ข้อสอบคอมพิวเตอร์ตั้งแต่ 1,000 ข้อ ขึ้นไป</p>
-                                        <p className="txtCard">- ดาวน์โหลดข้อสอบ ภาค ก และ ข เพิ่มเติม</p>
-                                        <p className="txtCard">- ดาวน์โหลดเอกสารต่าง ๆ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ตั้งแต่ 1,000 ข้อ ขึ้นไป</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -54,20 +53,16 @@ class Plans extends Component {
 
             <Container style={{marginTop:"60px"}}>
                 <Row className="justify-content-md-center">
-                    <Col xs="auto"><h5>ขั้นตอนที่ 2 รับสิทธิ์ใช้งาน</h5></Col>
+                    <Col xs="auto"><h5 className="topic">ขั้นตอนที่ 2 ติดต่อรับสิทธิ์เข้าใช้งาน</h5></Col>
                 </Row>
-                <Row className="justify-content-md-center">
-                    <Col>
-                        <Card className="mb-2">
-                            <Card.Header>ช่องทางติดต่อขอรับสิทธิ์ มีดังนี้</Card.Header>
-                            <Card.Body>
-                                <Card.Text>
-                                    <p className="txtCard">Facebook</p>
-                                    <p className="txtCard">Email</p>
-                                    <p className="txtCard">โทรศัพท์</p>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                <Row>
+                    <Col mx="auto" className="text-center" style={{color:"#b7996c"}}>
+                        <Alert style={{backgroundColor:"#f9f7f3"}}>
+                            <i className='fab fa-facebook'></i>
+                            <span style={{fontSize:"18px"}}> soonnung</span> &nbsp;&nbsp;
+                            <i className='fas fa-phone-square'></i>
+                            <span style={{fontSize:"14.5px"}}> 0827818941</span>
+                        </Alert>
                     </Col>
                 </Row>
             </Container>

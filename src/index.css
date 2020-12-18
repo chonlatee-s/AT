@@ -5,8 +5,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.Home{
-  margin-top: 120px;
+.containBox{
+  margin-top: 130px;
+  margin-bottom: 150px ;
 }
 .btn{
   margin-left: 5px;
@@ -28,11 +29,101 @@ body {
 }
 
 .boxBar {
+  color: #5b785b;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  bottom: 0em;
+  position: fixed;
+}
+.cardPlan1{
+  color: #fff;
+  background-color: #819d81;
+}
+.cardPlan2{
+  color: #fff;
+  background-color: #697f69;
+}
+.cardPlan3{
+  color: #fff;
+  background-color: #5b785b;
+}
+
+.topic{
   color: #627498;
+  margin-bottom: 20px;
+}
+.topic2{
+  color: #b7996c;
+  margin-bottom:30px;
+}
+
+a:link {
+  color: #5b785b;
+}
+a:visited {
+  color: #5b785b;
+}
+a:hover {
+  color: #b7996c;
+}
+a:active {
+  color: #5b785b;
+}
+
+.txtLine {
+  color: #b7996c;
+  position: relative;
+  font-size: 14px;
+  z-index: 1;
+  overflow: hidden;
   text-align: center;
-  padding-top: 20px;
-  margin-block-end: 0;
-  background-color: #fafbfd;
+  margin-top: 12px;
+}
+.txtLine:before, .txtLine:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 0.1px;
+  content: '\a0';
+  background-color: #e4d6c0;
+}
+.txtLine:before {
+  margin-left: -50%;
+  text-align: right;
+}
+.color {
+  background-color: #ccc;
+}
+.profile{
+  border-style: solid;
+  border-color: #d7e4d7;
+  border-width: 3px;
+  border-radius: 100px;
+}
+.txtProfile{
+  padding-top:10px;
+  padding-right:20px;
+  padding-left:20px;
+  padding-bottom:3px;
+  border-left-width:5px;
+  border-left-color:#5b785b;
+  border-left-style:solid;
+  background-color:#f6fff6;
+}
+.txtHead{
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #627498;
+}
+.txtDetail{
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 300;
+  color: #627498;
 }
 @media (max-width: 767.98px) { 
   .btnFull {width: 100%}
