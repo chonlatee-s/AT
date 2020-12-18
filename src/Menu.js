@@ -19,7 +19,7 @@ class Menu extends Component {
                     </NavLink>
                 </Nav>
                 <NavLink to="/AboutMe">
-                    <i className='far fa-user-circle' style={{fontSize:"34px", margin:"14px 0px 10px 10px", color:"#b7996c"}}></i>
+                    <i className='far fa-user-circle' style={{fontSize:"34px", margin:"14px 0px 10px 10px", color:"#697f69"}}></i>
                 </NavLink>
                 {/* <NavLink to="/">
                     <i className='fas fa-file-alt' style={{fontSize:"21px", margin:"14px 10px 10px 10px", color:"#b7996c"}}></i>

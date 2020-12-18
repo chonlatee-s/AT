@@ -15,7 +15,6 @@ class ExamList extends Component {
             reply : e.currentTarget.id,
             check: this.props.questionAll.answer===e.currentTarget.id?true:false // ตรวจถูกผิดตรงนี้ได้เลย  ไม่ต้องส่งไปตรวจเซิร์ฟเวอร์ เปลืองโหลด
         }
-        console.log(data)
         this.props.nextQuestion(data)
     }
 

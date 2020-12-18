@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Container, Row, Col, ProgressBar, Button, Spinner } from 'react-bootstrap'
 import ExamList from './ExamList'
+import Result from './Result'
 import axios from 'axios'
 
 class Exam extends Component {
@@ -259,7 +260,7 @@ class Exam extends Component {
                     </Row>
                 </div>
                 : // ถ้ายังโหลดข้อสอบไม่เสร็จ
-                    this.state.waitResult ? <p>คะแนน {this.state.score} </p> //<Result result={this.state.examLists} score={this.state.score} />
+                    this.state.waitResult ? <Result result={this.state.examLists} score={this.state.score} />
                         :
                         <Row>
                             <Col xs="12" className="text-center">

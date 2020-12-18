@@ -29,7 +29,7 @@ body {
 }
 
 .boxBar {
-  color: #5b785b;
+  color: #697f69;
   background-color: #fff;
   font-size: 12px;
   font-weight: 300;
@@ -54,7 +54,7 @@ body {
   margin-bottom: 20px;
 }
 .topic2{
-  color: #b7996c;
+  color: #5b785b;
   margin-bottom:30px;
 }
 
@@ -65,14 +65,14 @@ a:visited {
   color: #5b785b;
 }
 a:hover {
-  color: #b7996c;
+  color: #eb5749;
 }
 a:active {
   color: #5b785b;
 }
 
 .txtLine {
-  color: #b7996c;
+  color: #697f69;
   position: relative;
   font-size: 14px;
   z-index: 1;
@@ -108,7 +108,7 @@ a:active {
   padding-left:20px;
   padding-bottom:3px;
   border-left-width:5px;
-  border-left-color:#5b785b;
+  border-left-color:#697f69;
   border-left-style:solid;
   background-color:#f6fff6;
 }
@@ -124,6 +124,16 @@ a:active {
   margin: 0px;
   font-weight: 300;
   color: #627498;
+}
+.question{
+	font-weight: 300;
+  margin-bottom:0px;
+  font-size: 12px;
+}
+.result{font-size: 12px; margin-bottom:0px;}
+.checkAns{
+  margin-bottom:0px;
+  text-align: right;
 }
 @media (max-width: 767.98px) { 
   .btnFull {width: 100%}

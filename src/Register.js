@@ -31,7 +31,7 @@ class Register extends Component {
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
                     <Col md={6}>
-                        <Alert style={{backgroundColor:"#f9f7f3"}}>
+                        <Alert style={{backgroundColor:"#f6fff6"}}>
                             <h5 className="topic2">ลงทะเบียนก่อนเข้าใช้งาน</h5>
                             <GoogleLogin
                                 clientId="254303991922-di1i2i7bcp7fuvtp8ib5a7uirsq2kopm.apps.googleusercontent.com"
@@ -75,7 +75,7 @@ class Register extends Component {
                                 )}
                             />
                         </Alert>
-                        <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
+                        <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>รับสิทธิ์เข้าใช้งาน</span></NavLink>
                     </Col>

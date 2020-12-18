@@ -56,11 +56,11 @@ class Plans extends Component {
                     <Col xs="auto"><h5 className="topic">ขั้นตอนที่ 2 ติดต่อรับสิทธิ์เข้าใช้งาน</h5></Col>
                 </Row>
                 <Row>
-                    <Col mx="auto" className="text-center" style={{color:"#b7996c"}}>
-                        <Alert style={{backgroundColor:"#f9f7f3"}}>
+                    <Col mx="auto" className="text-center" style={{color:"#5b785b"}}>
+                        <Alert style={{backgroundColor:"#f6fff6"}}>
                             <i className='fab fa-facebook'></i>
-                            <span style={{fontSize:"18px"}}> soonnung</span> &nbsp;&nbsp;
-                            <i className='fas fa-phone-square'></i>
+                            <span style={{fontSize:"18px"}}> soonnung</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp;
+                            <i className='fas fa-phone-square'></i> 
                             <span style={{fontSize:"14.5px"}}> 0827818941</span>
                         </Alert>
                     </Col>

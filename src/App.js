@@ -7,6 +7,7 @@ import Plans from './Plans';
 import Exam from './Exam';
 import Bar from './Bar';
 import AboutMe from './AboutMe';
+import Policy from './Policy';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/RegisterAndTest" component={Register} />
           <Route path="/Exam" component={Exam} />
           <Route path="/AboutMe" component={AboutMe} />
+          <Route path="/Policy" component={Policy} />
         </Switch>
         <Bar/>
     </BrowserRouter>
