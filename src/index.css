@@ -52,6 +52,8 @@ body {
 .topic{
   color: #627498;
   margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 24px;
 }
 .topic2{
   color: #5b785b;
@@ -126,14 +128,20 @@ a:active {
   color: #627498;
 }
 .question{
-	font-weight: 300;
   margin-bottom:0px;
   font-size: 12px;
 }
-.result{font-size: 12px; margin-bottom:0px;}
+.result{
+  font-size: 12px; 
+  font-weight: 300;
+  margin-bottom:0px; 
+  color:'#627498';
+}
 .checkAns{
   margin-bottom:0px;
+  font-weight: 300;
   text-align: right;
+  color:'#627498';
 }
 @media (max-width: 767.98px) { 
   .btnFull {width: 100%}

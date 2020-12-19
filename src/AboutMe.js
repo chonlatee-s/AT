@@ -6,7 +6,7 @@ class AboutMe extends Component {
         return(
             <Container className="containBox">
                 <Row className="justify-content-md-center">
-                    <Col xs="auto"><h5 className="topic">เกี่ยวกับผู้จัดทำ</h5></Col>
+                    <Col><h5 className="topic text-center">เกี่ยวกับผู้จัดทำ</h5></Col>
                 </Row>
                 <Row>
                     <Col md="12" lg="3" className="text-center mb-2">
@@ -25,14 +25,14 @@ class AboutMe extends Component {
                             <p className="txtDetail">- เป็นหนึ่งในทีมของสถาบันสหกิจศึกษาและพัฒนาสื่ออิเล็กทรอนิสก์ไทย-เยอรมัน ออกแบบและพัฒนาเกมการแข่งขัน ตอบปัญหาทางธรรมะ ในงานวิสาขบูชาโลก</p>
                             <p className="txtDetail">- พัฒนาแอปพลิเคชันจัดการโภชนาการโคนม และถวายรายงานกรมสมเด็จพระเทพรัตนราชสุดาฯ ในงานวันโคนมแห่งชาติ</p>
                             <p className="txtDetail">- ชนะเลิศการประกวดสื่อการสอน ประเภทซอฟต์แวร์ ในงาน Teaching Academy 2015 (ระดับประเทศ)</p>
-                            <p className="txtDetail">- ครูสาขาคอมพิวเตอร์ธุรกิจ</p>
-                            <p className="txtDetail">- หัวหน้างานศูนย์ข้อมูลสารสนเทศ</p>
                             <p className="txtDetail">- พัฒนาโปรแกรมตรวจโรคเบื้องต้นด้วยปิงปองเจ็ดสีให้กับโรงพยาบาลส่งเสริมสุขภาพตำบล</p>
+                            <p className="txtDetail">- ครูสาขาคอมพิวเตอร์ธุรกิจ</p>
                             <p className="txtDetail">- พัฒนาเว็บไซต์สอบครูผู้ช่วย ครูผู้ช่วย.com</p>
                             <p className="txtDetail">- พัฒนาแอปพคิเคชันสอบครูผู้ช่วย ครูผู้ช่วย</p>
+                            <p className="txtDetail">- หัวหน้างานศูนย์ข้อมูลสารสนเทศ</p>
                             <p className="txtDetail">- พัฒนาระบบสารสนเทศให้องค์กรต่าง ๆ เช่น กระทรวงพาณิชย์, เบทราโก, สมศ.</p>
                             <p className="txtHead">กำลังศึกษา</p>
-                            <p className="txtDetail">- ปฏิสัมพันธ์ระหว่างมนุษย์กับคอมพิวเตอร์</p>
+                            <p className="txtDetail">- ปฏิสัมพันธ์ระหว่างมนุษย์กับคอมพิวเตอร์ (Human–computer interaction)</p>
                             <p></p>
                         </div>
                     </Col>

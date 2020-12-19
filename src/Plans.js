@@ -6,7 +6,7 @@ class Plans extends Component {
             <div className="containBox">
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col xs="auto"><h5 className="topic">ขั้นตอนที่ 1 เลือกแพลน</h5></Col>
+                    <Col><h5 className="topic text-center">ขั้นตอนที่ 1 เลือกแพลน</h5></Col>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col mx="auto">
@@ -53,7 +53,7 @@ class Plans extends Component {
 
             <Container style={{marginTop:"60px"}}>
                 <Row className="justify-content-md-center">
-                    <Col xs="auto"><h5 className="topic">ขั้นตอนที่ 2 ติดต่อรับสิทธิ์เข้าใช้งาน</h5></Col>
+                    <Col><h5 className="topic text-center">ขั้นตอนที่ 2 ติดต่อรับสิทธิ์เข้าใช้งาน</h5></Col>
                 </Row>
                 <Row>
                     <Col mx="auto" className="text-center" style={{color:"#5b785b"}}>
@@ -61,7 +61,7 @@ class Plans extends Component {
                             <i className='fab fa-facebook'></i>
                             <span style={{fontSize:"18px"}}> soonnung</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp;
                             <i className='fas fa-phone-square'></i> 
-                            <span style={{fontSize:"14.5px"}}> 0827818941</span>
+                            <span style={{fontSize:"14.5px"}}> 08-2781-8941</span>
                         </Alert>
                     </Col>
                 </Row>

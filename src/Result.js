@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Container, Row, Col, ProgressBar, Alert, Image} from 'react-bootstrap'
+import {Container, Row, Col, ProgressBar, Alert} from 'react-bootstrap'
 
 // import { connect } from 'react-redux'
 
@@ -32,6 +32,7 @@ class Result extends Component {
                         <p style={{fontSize:"60px", margin:"0px", color:"#fff"}}>{`${this.props.score}/${this.props.result.length}`}</p>
                         <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${(this.props.score*100)/this.props.result.length}%`} style={{height: "10px"}}/>
                     </Alert>
+                    <span style={{fontSize:"12px",color:'#627498'}}>หากมีข้อสงสัย กรุณาติดต่อผู้ดูแลระบบ</span>
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">
@@ -39,8 +40,8 @@ class Result extends Component {
                                 this.props.result.map((item,index)=>{
                                     return (
                                         <div key={index}>
-                                            <p className="question">ข้อ {index+1} {item.question}</p>
-                                            <p className="result"><span style={{color:"#5b785b", fontWeight:300}}>ตอบ</span> 
+                                            <p className="question"  style={{color:'#34476c'}}>ข้อ {index+1} {item.question}</p>
+                                            <p className="result" style={{color:'#34476c'}}><span style={{color:"#5b785b"}}>ตอบ</span> 
                                                 {
                                                     item.reply==='1' ?  ' '+item.ch1 :
                                                     item.reply==='2' ?  ' '+item.ch2 :
@@ -51,8 +52,8 @@ class Result extends Component {
                                             
                                             {
                                                 item.check===true ? null : 
-                                                <p className="result">
-                                                <span style={{color:"#5b785b", fontWeight:300}}>เฉลย </span>
+                                                <p className="result" style={{color:'#34476c'}}>
+                                                <span style={{color:"#5b785b"}}>เฉลย </span>
                                                     {
                                                         item.answer==='1' ? item.ch1 :
                                                         item.answer==='2' ? item.ch2 :
@@ -61,7 +62,7 @@ class Result extends Component {
                                                 </p>
                                             }
                                            
-                                            <div className="checkAns">
+                                            <div className="checkAns" style={{color:'#34476c'}}>
                                                 {
                                                     item.check===true ? 
                                                     <svg className="bi bi-check" width="0.8em" height="0.8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
