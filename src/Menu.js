@@ -7,7 +7,7 @@ class Menu extends Component {
         return(
             <Navbar collapseOnSelect expand="md" style={{backgroundColor:"#fff"}} fixed="top">
             <Navbar.Brand>
-                <NavLink to="/"><Image src={logo} className="img-fluid" width="140px" alt="นายโรบอท" /></NavLink>
+                <NavLink to="/"><Image src={logo} className="img-fluid" width="90px" alt="นายโรบอท" /></NavLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">

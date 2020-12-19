@@ -8,20 +8,32 @@ import Exam from './Exam';
 import Bar from './Bar';
 import AboutMe from './AboutMe';
 import Policy from './Policy';
+import Error from './Error';
+
+//redux
+import { createStore } from 'redux'
+import Reducer from './Reducer'
+import { Provider } from 'react-redux'
+
 
 function App() {
+  const store = createStore(Reducer) // ประกาศค่าคงที่ Store เพื่อเก็บข้อมูลของ State ทั้งหมดที่จะใช้ในแอปพลิเคชัน
+  // นำแท็ก Provider ครอบเนื้อหาที่จะแสดงใน App คอมโนแนนต์
   return (
     <BrowserRouter>
+    <Provider store = {store}>
       <Menu/>
         <Switch>
           <Route exact={true} path="/" component={Home} />
-          <Route path="/PlansAndContact" component={Plans} />
-          <Route path="/RegisterAndTest" component={Register} />
-          <Route path="/Exam" component={Exam} />
-          <Route path="/AboutMe" component={AboutMe} />
-          <Route path="/Policy" component={Policy} />
+          <Route exact={true} path="/PlansAndContact" component={Plans} />
+          <Route exact={true} path="/RegisterAndTest" component={Register} />
+          <Route exact={true} path="/Exam" component={Exam} />
+          <Route exact={true} path="/AboutMe" component={AboutMe} />
+          <Route exact={true} path="/Policy" component={Policy} />
+          <Route component={Error} />
         </Switch>
         <Bar/>
+        </Provider>
     </BrowserRouter>
   );
 }

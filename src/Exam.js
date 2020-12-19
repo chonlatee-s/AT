@@ -3,6 +3,7 @@ import {Container, Row, Col, ProgressBar, Button, Spinner } from 'react-bootstra
 import ExamList from './ExamList'
 import Result from './Result'
 import axios from 'axios'
+import { connect } from 'react-redux'
 
 class Exam extends Component {
      state = {
@@ -30,6 +31,7 @@ class Exam extends Component {
         //     IsLoggedIn: false,
         //     type: ''
         // }
+
         let exam = []
         var base64 = require('base-64');
         var utf8 = require('utf8');
@@ -276,4 +278,18 @@ class Exam extends Component {
         );
     }
 }
-export default Exam
+// export default Exam
+// จัดการ Store 
+const mapStateToProps = (state) => {
+    return {
+        stateFromStore: state.data
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatchFromStore: (dataLogin) => {
+            return dispatch({ type: 'ADD_DATA', playload: dataLogin })
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Exam)

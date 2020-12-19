@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Alert, Button  } from 'react-bootstrap';
-import {NavLink} from 'react-router-dom';
+import {NavLink, Redirect} from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import { connect } from 'react-redux'
 
 class Register extends Component {
+
     responseGoogle = (res) => {
         let dataLogin = {
             UserId: res.googleId,
@@ -27,6 +29,8 @@ class Register extends Component {
         this.props.dispatchFromStore(dataLogin)
     }
     render() {
+        const dataStore = this.props.stateFromStore
+        if(dataStore.IsLoggedIn) return <Redirect to='/Exam' />
         return (
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
@@ -34,7 +38,7 @@ class Register extends Component {
                         <Alert style={{backgroundColor:"#f6fff6"}}>
                             <h5 className="topic2">ลงทะเบียนก่อนเข้าใช้งาน</h5>
                             <GoogleLogin
-                                clientId="254303991922-di1i2i7bcp7fuvtp8ib5a7uirsq2kopm.apps.googleusercontent.com"
+                                clientId=""
                                 onSuccess={this.responseGoogle}
                                 render={renderProps => (
                                    
@@ -54,7 +58,7 @@ class Register extends Component {
                             />
                             <p className="txtLine"> &nbsp;&nbsp; หรือ &nbsp;&nbsp; </p>
                             <FacebookLogin
-                                appId="761688894366809"
+                                appId=""
                                 fields="name,email,picture"
                                 callback={this.responseFacebook}
                                 isMobile={false}
@@ -84,4 +88,19 @@ class Register extends Component {
         );
     }
 }
-export default Register
+
+// export default Register
+const mapStateToProps = (state) => { //mapStateToProps แปลงค่า state ให้เป็น props
+    return {
+        stateFromStore : state.data // เก็บค่า state ที่ได้จาก stroe
+    }
+}
+const mapDispatchToProps = dispatch => { //mapDispatchToProps ฟังก์ชันที่ store ส่งมาให้กับคออมโพเนนต์ ผ่าน props
+    return {
+        dispatchFromStore : (dataLogin) => { // เมื่อคอมโพเนนต์ปัจจุบันต้องการใช้ dispatch ก็ใช้คำสั่งนี้เลย
+            return dispatch({ type:'ADD_DATA', playload:dataLogin }) // เรียกใช้ dispatch ผ่านค่าฟังก์ชัน
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps) (Register) // ผ่านค่า map ไปยังฟังก์ขัน connect
+
