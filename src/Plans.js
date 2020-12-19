@@ -36,7 +36,7 @@ class Plans extends Component {
                             </Card>
                             <Card className="cardPlan3">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 3 &nbsp;&nbsp;<Badge pill variant="warning">แนะนำ</Badge></Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 3 &nbsp;&nbsp;<Badge pill variant="warning">ยอดนิยม</Badge></Card.Title>
                                     <Card.Text>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ตั้งแต่ 1,000 ข้อ ขึ้นไป</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
@@ -59,7 +59,7 @@ class Plans extends Component {
                     <Col mx="auto" className="text-center" style={{color:"#5b785b"}}>
                         <Alert style={{backgroundColor:"#f6fff6"}}>
                             <i className='fab fa-facebook'></i>
-                            <span style={{fontSize:"18px"}}> soonnung</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp;
+                            <span style={{fontSize:"18px"}}> เพจ นายโรบอท.com</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp;
                             <i className='fas fa-phone-square'></i> 
                             <span style={{fontSize:"14.5px"}}> 08-2781-8941</span>
                         </Alert>

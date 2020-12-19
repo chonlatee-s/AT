@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import {Nav, Navbar, Button} from 'react-bootstrap'
+import {Nav, Navbar, Button, Image} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom';
+import logo from './img/logo2.png';
 class Menu extends Component {
     render() {
         return(
             <Navbar collapseOnSelect expand="md" style={{backgroundColor:"#fff"}} fixed="top">
             <Navbar.Brand>
-                <NavLink to="/">ศูนย์หนึ่ง</NavLink>
+                <NavLink to="/"><Image src={logo} className="img-fluid" width="140px" alt="นายโรบอท" /></NavLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -21,9 +22,6 @@ class Menu extends Component {
                 <NavLink to="/AboutMe">
                     <i className='far fa-user-circle' style={{fontSize:"34px", margin:"14px 0px 10px 10px", color:"#697f69"}}></i>
                 </NavLink>
-                {/* <NavLink to="/">
-                    <i className='fas fa-file-alt' style={{fontSize:"21px", margin:"14px 10px 10px 10px", color:"#b7996c"}}></i>
-                </NavLink> */}
             </Navbar.Collapse>
             </Navbar>
         );

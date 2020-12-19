@@ -6,7 +6,7 @@ class AboutMe extends Component {
         return(
             <Container className="containBox">
                 <Row className="justify-content-md-center">
-                    <Col><h5 className="topic text-center">เกี่ยวกับผู้จัดทำ</h5></Col>
+                    <Col><h5 className="topic text-center">ผู้ก่อตั้ง นายโรบอท.com</h5></Col>
                 </Row>
                 <Row>
                     <Col md="12" lg="3" className="text-center mb-2">
@@ -14,7 +14,6 @@ class AboutMe extends Component {
                             <Image src={profile} className="img-fluid profile" width="120px" alt="คอมพิวเตอร์" />
                         </Col>
                         <p style={{marginTop:'10px', marginBottom:'0px', color:"#697f69", fontWeight:"800", fontSize:"18px"}}>ชลธี สินสาตร์</p>
-                        {/* <p style={{marginTop:'0px', color:"#5b785b", fontWeight:"300", fontSize:"12px"}}>ผู้ดูแลระบบ</p> */}
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">
