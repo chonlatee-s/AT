@@ -1,6 +1,6 @@
 const initialState = {
     data: {
-        UserId:'xxchon',
+        UserId:'',
         Name:'',
         Profile:'',
         IsLoggedIn:false,

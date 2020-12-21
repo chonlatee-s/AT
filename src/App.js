@@ -8,6 +8,7 @@ import Exam from './Exam';
 import Bar from './Bar';
 import AboutMe from './AboutMe';
 import Policy from './Policy';
+import Topic from './Topic';
 import Error from './Error';
 
 //redux
@@ -30,6 +31,7 @@ function App() {
           <Route exact={true} path="/Exam" component={Exam} />
           <Route exact={true} path="/AboutMe" component={AboutMe} />
           <Route exact={true} path="/Policy" component={Policy} />
+          <Route exact={true} path="/Detail" component={Topic} />
           <Route component={Error} />
         </Switch>
         <Bar/>

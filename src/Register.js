@@ -4,7 +4,6 @@ import {NavLink, Redirect} from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { connect } from 'react-redux'
-
 class Register extends Component {
 
     responseGoogle = (res) => {
@@ -38,7 +37,7 @@ class Register extends Component {
                         <Alert style={{backgroundColor:"#f6fff6"}}>
                             <h5 className="topic2">ลงทะเบียนก่อนเข้าใช้งาน</h5>
                             <GoogleLogin
-                                clientId=""
+                                clientId="254303991922-nigsnvlpreviefu3elonr5seecbc95af.apps.googleusercontent.com"
                                 onSuccess={this.responseGoogle}
                                 render={renderProps => (
                                    
@@ -58,7 +57,7 @@ class Register extends Component {
                             />
                             <p className="txtLine"> &nbsp;&nbsp; หรือ &nbsp;&nbsp; </p>
                             <FacebookLogin
-                                appId=""
+                                appId="1826695754154361"
                                 fields="name,email,picture"
                                 callback={this.responseFacebook}
                                 isMobile={false}
@@ -82,6 +81,11 @@ class Register extends Component {
                         <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>รับสิทธิ์เข้าใช้งาน</span></NavLink>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="text-center">
+                        <i><p style={{marginTop:'40px', marginBottom:'0px', color:"#697f69", fontWeight:"300", fontSize:"16px"}}>printf ( " Hello World ! เอกคอมพิวเตอร์ " ) ;</p></i>
                     </Col>
                 </Row>
             </Container>

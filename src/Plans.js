@@ -6,7 +6,9 @@ class Plans extends Component {
             <div className="containBox">
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col><h5 className="topic text-center">ขั้นตอนที่ 1 เลือกแพลน</h5></Col>
+                    <Col><h5 className="topic text-center">ขั้นตอนที่ 1 เลือกรูปแบบการใช้งาน</h5>
+                    </Col>
+                    
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col mx="auto">
@@ -15,7 +17,7 @@ class Plans extends Component {
                                 <Card.Body>
                                     <Card.Title className="txtCardHead">แบบที่ 1 ใช้งานฟรี</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ 1-30 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-30 ข้อ</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -24,44 +26,48 @@ class Plans extends Component {
                             </Card>
                             <Card className="cardPlan2">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 2</Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 2 อุ่นใจ</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ 1-500 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-500 ข้อ</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งาน 1 ปี</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <small className="price">ราคา 49 บาท</small>
+                                    <small className="price"><span className="txtPlan">จาก 79 เหลือ</span> ราคา 59 บาท</small>
                                 </Card.Footer>
                             </Card>
                             <Card className="cardPlan3">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 3 &nbsp;&nbsp;<Badge pill variant="warning">ยอดนิยม</Badge></Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 3 คู่ใจ&nbsp;&nbsp;<Badge pill variant="warning">ยอดนิยม</Badge></Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบคอมพิวเตอร์ตั้งแต่ 1,000 ข้อ ขึ้นไป</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1,000 ข้อ ขึ้นไป</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งาน 2 ปี</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;<span>พิเศษ สมัครเป็นคู่ลดเหลือ 69 บาท</span></p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <small className="price">ราคา 69 บาท</small>
+                                    <small className="price"><span className="txtPlan">จาก 99 เหลือ</span> ราคา 79 บาท <span style={{fontSize:"14px"}}></span></small>
                                 </Card.Footer>
                             </Card>
                         </CardDeck>
+                        <p style={{fontSize:'12px', fontWeight:'300', margin:'8px 0px 0px 0px', textAlign:'center', color:'#e7400d'}}>" ราคาพิเศษ ถึง 30 เมษายน 2564"</p>
                     </Col>
                 </Row>
             </Container>
 
-            <Container style={{marginTop:"60px"}}>
+            <Container style={{marginTop:"65px"}}>
                 <Row className="justify-content-md-center">
-                    <Col><h5 className="topic text-center">ขั้นตอนที่ 2 ติดต่อรับสิทธิ์เข้าใช้งาน</h5></Col>
+                    <Col><h5 className="topic text-center">ขั้นตอนที่ 2 ติดต่อรับสิทธิ์ใช้งาน</h5></Col>
                 </Row>
                 <Row>
                     <Col mx="auto" className="text-center" style={{color:"#5b785b"}}>
                         <Alert style={{backgroundColor:"#f6fff6"}}>
-                            <i className='fab fa-facebook'></i>
-                            <span style={{fontSize:"18px"}}> เพจ นายโรบอท.com</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp;
+                            {/* <i className='fab fa-facebook'></i>
+                            <span style={{fontSize:"18px"}}> เพจ นายโรบอท.com</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp; */}
                             <i className='fas fa-phone-square'></i> 
-                            <span style={{fontSize:"14.5px"}}> 08-2781-8941</span>
+                            <span style={{fontSize:"14.5px"}}> 08-2781-8941 (ชล)</span>
                         </Alert>
                     </Col>
                 </Row>

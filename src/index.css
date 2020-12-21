@@ -6,8 +6,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .containBox{
-  margin-top: 130px;
-  margin-bottom: 150px ;
+  margin-top: 100px;
+  margin-bottom: 80px ;
 }
 .btn{
   margin-left: 5px;
@@ -51,9 +51,9 @@ body {
 
 .topic{
   color: #627498;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 21px;
 }
 .topic2{
   color: #5b785b;
@@ -62,12 +62,13 @@ body {
 
 a:link {
   color: #5b785b;
+  text-decoration: none;
 }
 a:visited {
   color: #5b785b;
 }
 a:hover {
-  color: #eb5749;
+  color: #e7400d;
 }
 a:active {
   color: #5b785b;
@@ -143,6 +144,21 @@ a:active {
   text-align: right;
   color:'#627498';
 }
+.txtPlan {
+  -webkit-text-decoration-line: line-through; /* Safari */
+  text-decoration-line: line-through; 
+  text-decoration-thickness: 0.05em;
+}
+.showTextMenu{
+  display: none;
+}
 @media (max-width: 767.98px) { 
   .btnFull {width: 100%}
+  .showTextMenu{
+    display: inline;
+    text-decoration: none;
+  }
+  .showIcon{
+    display: none;
+  }
 }

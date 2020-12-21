@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import {Container, Row, Col, ProgressBar, Alert} from 'react-bootstrap'
-
-// import { connect } from 'react-redux'
+import {Container, Row, Col, ProgressBar, Alert, Image, Badge} from 'react-bootstrap'
+import { connect } from 'react-redux'
 
 class Result extends Component {
     
     render() {
-        // const dataStore = this.props.stateFromStore
+        const dataStore = this.props.stateFromStore
         return (
             <Container className="containBox">
                 <Row className="justify-content-md-center">
@@ -16,23 +15,17 @@ class Result extends Component {
                 </Row>
                 <Row>
                     <Col md="12" lg="3" className="text-center mb-2">
-
-                {/* { 
-                    dataStore.IsLoggedIn?
                     <div>
-                        <Image src ={dataStore.Profile} roundedCircle style={{width:"60px", height:"60px", border: '3px solid #ddd'}}/>
-                        <div style={{fontSize:'14px', fontWeight:'300', paddingBottom:'5px', paddingTop:'3px'}}>{dataStore.Name}</div>
+                        <Image src ={dataStore.Profile} roundedCircle style={{width:"50px", height:"50px", border: '1px solid #ddd'}}/>
+                        <div style={{fontSize:'12px', fontWeight:'300', paddingBottom:'5px', paddingTop:'2px'}}>{dataStore.Name}</div>
                     </div>
-                    :null
-                       
-                } */}
-                    
                     <Alert style={{backgroundColor:"#697f69"}}>
                         <p style={{margin:"0px", fontSize:"21px", color:"#fff"}}>คะแนนรวม</p>
                         <p style={{fontSize:"60px", margin:"0px", color:"#fff"}}>{`${this.props.score}/${this.props.result.length}`}</p>
                         <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${(this.props.score*100)/this.props.result.length}%`} style={{height: "10px"}}/>
                     </Alert>
-                    <span style={{fontSize:"12px",color:'#627498'}}>หากมีข้อสงสัย กรุณาติดต่อผู้ดูแลระบบ</span>
+                    <span style={{fontSize:"12px",color:'#627498'}}>การใช้งานของคุณ : <Badge pill variant="success">ใช้งานฟรี</Badge></span>
+                    <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>หากมีข้อสงสัย กรุณาติดต่อผู้ดูแลระบบ</p>
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">
@@ -93,11 +86,10 @@ class Result extends Component {
         );
     }
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//         stateFromStore : state.data
-//     }
-// }
-// export default connect(mapStateToProps, null) (Result)
-export default Result
+// export default Result
+const mapStateToProps = (state) => {
+    return {
+        stateFromStore : state.data
+    }
+}
+export default connect(mapStateToProps, null) (Result)

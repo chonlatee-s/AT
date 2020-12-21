@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Container, Row, Col, ProgressBar, Button, Spinner } from 'react-bootstrap'
+import { Redirect } from 'react-router-dom'
+import {Container, Row, Col, ProgressBar, Button, Spinner, Image } from 'react-bootstrap'
 import ExamList from './ExamList'
 import Result from './Result'
 import axios from 'axios'
@@ -24,22 +25,21 @@ class Exam extends Component {
     }
 ////////////////// step 1 pull exam /////////////////////////////
     getExam = () => {
-        // let dataLogin = {
-        //     UserId: '',
-        //     Name: '',
-        //     Profile: '',
-        //     IsLoggedIn: false,
-        //     type: ''
-        // }
+        let dataLogin = {
+            UserId: '',
+            Name: '',
+            Profile: '',
+            IsLoggedIn:'',
+            type: ''
+        }
 
         let exam = []
         var base64 = require('base-64');
         var utf8 = require('utf8');
 
-        // this.props.dispatchFromStore(dataLogin)
         // axios.get(`${window.location.origin}/getExams.php?topic=${this.props.match.params.topic}`)
-        this.setState({ showText: true }) // โชว์ว่ากำลังโหลดข้อมูล
-        axios.get(`http://localhost/at_exam/getExams.php`)
+        // axios.get(`http://localhost/at_exam/getExams.php`)
+        axios.get(`${window.location.origin}/getExams.php`)
             .then((res) => {
 
                 var bytes = base64.decode(res.data);
@@ -68,6 +68,7 @@ class Exam extends Component {
 
             })
             .catch((err) => {
+                this.setState({ showText: true }) // ถ้าไม่พบข้อมูล
                 console.log(err)
             })
 
@@ -202,6 +203,8 @@ class Exam extends Component {
     }
 /////////////////////////////////////// END FUNCTION ////////////////////////////////////////////////////////////
     render() {
+        const dataStore = this.props.stateFromStore
+        if (!dataStore.IsLoggedIn) return (<Redirect to='/'/>) // ถ้าไม่ Login ให้เด้งไป
         return(
             <Container className="containBox">
                 {
@@ -209,7 +212,11 @@ class Exam extends Component {
                 <div>
                     <Row>
                         <Col>
-                            <p style={{ fontSize: "20px", fontWeight: 800, margin: "3px", color: "#627498" }} className="text-center">
+                            <div className="text-center">
+                                <Image src={dataStore.Profile} roundedCircle style={{ width: "50px", height: "50px", border: '2px solid #ddd' }} />
+                                <div style={{ fontSize: '12px', fontWeight: '300', paddingBottom: '5px', paddingTop: '1px' }}>{dataStore.Name}</div>
+                            </div>
+                            <p style={{ fontSize: "16px", fontWeight: 500, margin: "3px", color: "#627498" }} className="text-center">
                                 {
                                     this.state.minute !== 0 ? 'เวลา ' + this.changeZeroSec(this.state.minute) + ' : ' + this.changeZeroSec(this.state.sec) + ' นาที'
                                         : this.state.sec !== 0 ? 'เวลา ' + this.changeZeroSec(this.state.sec) + ' วินาที' : 'หมดเวลา'

@@ -21,27 +21,27 @@ class ExamList extends Component {
     render() {
         let s1,s2,s3,s4 = { color : '#5b785b' }
         if(this.props.questionAll.reply === '1'){
-            s1 = {color:'#eb5749'}
+            s1 = {color:'#e7400d'}
             s2 = {color:'#5b785b'}
             s3 = {color:'#5b785b'}
             s4 = {color:'#5b785b'}
         }else if(this.props.questionAll.reply === '2'){
             s1 = {color:'#5b785b'}
-            s2 = {color:'#eb5749'}
+            s2 = {color:'#e7400d'}
             s3 = {color:'#5b785b'}
             s4 = {color:'#5b785b'}
         }
         else if(this.props.questionAll.reply === '3'){
             s1 = {color:'#5b785b'}
             s2 = {color:'#5b785b'}
-            s3 = {color:'#eb5749'}
+            s3 = {color:'#e7400d'}
             s4 = {color:'#5b785b'}
         }
         else if(this.props.questionAll.reply === '4'){
             s1 = {color:'#5b785b'}
             s2 = {color:'#5b785b'}
             s3 = {color:'#5b785b'}
-            s4 = {color:'#eb5749'}
+            s4 = {color:'#e7400d'}
         }
         else{
             s1 = {color:'#5b785b'}
