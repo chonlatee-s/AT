@@ -64,10 +64,10 @@ class Plans extends Component {
                 <Row>
                     <Col mx="auto" className="text-center" style={{color:"#5b785b"}}>
                         <Alert style={{backgroundColor:"#f6fff6"}}>
-                            {/* <i className='fab fa-facebook'></i>
-                            <span style={{fontSize:"18px"}}> เพจ นายโรบอท.com</span>&nbsp;&nbsp; หรือ &nbsp;&nbsp; */}
+                            <i className='fab fa-facebook'></i>
+                            <span style={{fontSize:"14px", fontWeight:'300'}}> <a href="https://facebook.com/groups/224616649206338/">เข้าร่วมกลุ่ม</a></span>&nbsp;&nbsp; หรือ &nbsp;&nbsp;
                             <i className='fas fa-phone-square'></i> 
-                            <span style={{fontSize:"14.5px"}}> 08-2781-8941 (ชล)</span>
+                            <span style={{fontSize:"14.5px", fontWeight:'300'}}> 08-2781-8941 (ชล)</span>
                         </Alert>
                     </Col>
                 </Row>
