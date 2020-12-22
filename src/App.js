@@ -10,6 +10,7 @@ import AboutMe from './AboutMe';
 import Policy from './Policy';
 import Topic from './Topic';
 import Error from './Error';
+import Expire from './Expire';
 
 //redux
 import { createStore } from 'redux'
@@ -32,6 +33,7 @@ function App() {
           <Route exact={true} path="/AboutMe" component={AboutMe} />
           <Route exact={true} path="/Policy" component={Policy} />
           <Route exact={true} path="/Detail" component={Topic} />
+          <Route exact={true} path="/Expire" component={Expire} />
           <Route component={Error} />
         </Switch>
         <Bar/>

@@ -11,17 +11,16 @@ class Register extends Component {
     RegisterLoginSentData = (dataLogin) => {
         // ลงทะเบียนเข้าฐานข้อมูล 
         let qs = require('qs');
-        const base64 = require('base-64');
-        const utf8 = require('utf8');
 
         // เช็คว่ามีการลงทะเบียนหรือยัง
         // axios.get(`http://localhost/at_exam/getIdRegis.php?UserId=${dataLogin.UserId}`) 
         axios.get(`${window.location.origin}/getIdRegis.php?UserId=${dataLogin.UserId}`)
         .then((res) => {
-
             const data = res.data; 
+            console.log(data)
             if(data) { // ถ้ามี เอาข้อมูลมาใช้
                 dataLogin.Plan = data.plan
+                dataLogin.check_date_exp = data.check_date_exp
                 this.props.dispatchFromStore(dataLogin)
             }else { // ถ้ายังไม่ลงทะเบียน ให้นำข้อมูลไปลงทะเบียน ถ้าไม่มีข้อมูลจะ return false
                 // axios.post(`http://localhost/at_exam/sentUser.php`, qs.stringify(dataLogin))
@@ -62,8 +61,13 @@ class Register extends Component {
     }
 
     render() {
+
         const dataStore = this.props.stateFromStore
-        if(dataStore.IsLoggedIn) return <Redirect to='/Exam' />
+        if(dataStore.check_date_exp === '1') return <Redirect to='/Expire' /> // ถ้าหมดอายุ
+        else {
+            if(dataStore.IsLoggedIn) return <Redirect to='/Exam' />
+        }
+
         return (
             <Container className="containBox">
                 <Row>
