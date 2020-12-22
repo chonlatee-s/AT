@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Container, Row, Col, Image} from 'react-bootstrap'
-import profile from './img/profile2.jpg';
+import profile from './img/profile.jpg';
 class AboutMe extends Component {
     render() {
         return(
@@ -11,7 +11,7 @@ class AboutMe extends Component {
                 <Row>
                     <Col md="12" lg="3" className="text-center mb-2">
                         <Col mx="auto">
-                            <Image src={profile} className="img-fluid profile" width="90px" alt="คอมพิวเตอร์" />
+                            <Image src={profile} className="img-fluid profile" width="80px" alt="คอมพิวเตอร์" />
                         </Col>
                         <p style={{marginTop:'10px', marginBottom:'0px', color:"#697f69", fontWeight:"800", fontSize:"18px"}}>ชลธี สินสาตร์</p>
                     </Col>

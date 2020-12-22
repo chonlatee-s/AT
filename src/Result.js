@@ -22,10 +22,10 @@ class Result extends Component {
                     <Alert style={{backgroundColor:"#697f69"}}>
                         <p style={{margin:"0px", fontSize:"21px", color:"#fff"}}>คะแนนรวม</p>
                         <p style={{fontSize:"60px", margin:"0px", color:"#fff"}}>{`${this.props.score}/${this.props.result.length}`}</p>
-                        <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${(this.props.score*100)/this.props.result.length}%`} style={{height: "10px"}}/>
+                        <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${Math.round((this.props.score*100)/this.props.result.length)}%`} style={{height: "10px"}}/>
                     </Alert>
-                    <span style={{fontSize:"12px",color:'#627498'}}>การใช้งานของคุณ : <Badge pill variant="success">ใช้งานฟรี</Badge></span>
-                    <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>หากมีข้อสงสัย กรุณาติดต่อผู้ดูแลระบบ</p>
+                        <h6><Badge variant="success"> {dataStore.Plan === '1' ? 'แบบที่ 1 ใช้งานฟรี' : dataStore.Plan === '2' ? 'แบบที่ 2 อุ่นใจ' : 'แบบที่ 3 คู่ใจ' } </Badge></h6>
+                        <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>หากมีข้อสงสัย กรุณาติดต่อผู้ดูแลระบบ</p>
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">

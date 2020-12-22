@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Button} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom';
-import logo from './img/logo2.png';
+import logo from './img/logo2.jpg';
 class Menu extends Component {
     render() {
         return(

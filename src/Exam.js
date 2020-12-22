@@ -25,19 +25,11 @@ class Exam extends Component {
     }
 ////////////////// step 1 pull exam /////////////////////////////
     getExam = () => {
-        let dataLogin = {
-            UserId: '',
-            Name: '',
-            Profile: '',
-            IsLoggedIn:'',
-            type: ''
-        }
-
+       
         let exam = []
         var base64 = require('base-64');
         var utf8 = require('utf8');
 
-        // axios.get(`${window.location.origin}/getExams.php?topic=${this.props.match.params.topic}`)
         // axios.get(`http://localhost/at_exam/getExams.php`)
         axios.get(`${window.location.origin}/getExams.php`)
             .then((res) => {
@@ -179,32 +171,11 @@ class Exam extends Component {
             if (item.answer === item.reply) result += 1
         })
         this.setState({ score: result, waitResult: true, waitData: false })
-
-        // ส่งข้อมูลไปฐานข้อมูล
-        // const dataStore = this.props.stateFromStore
-        // let qs = require('qs');
-        // let data = {
-        //     id: dataStore.UserId,
-        //     name: dataStore.Name,
-        //     profile: dataStore.Profile,
-        //     score: result
-        // }
-        // if (this.props.match.params.topic === '3') {
-        //     axios.post(`${window.location.origin}/sentUser.php`, qs.stringify(data))
-        //         .then((res) => {
-        //             // console.log(res)
-        //         })
-        //         .catch((err) => {
-        //             console.log(err)
-        //         })
-        // } else {
-        //     console.log('do it')
-        // }
     }
 /////////////////////////////////////// END FUNCTION ////////////////////////////////////////////////////////////
     render() {
         const dataStore = this.props.stateFromStore
-        if (!dataStore.IsLoggedIn) return (<Redirect to='/'/>) // ถ้าไม่ Login ให้เด้งไป
+        if (!dataStore.IsLoggedIn) return (<Redirect to='/'/>) // ถ้าไม่ Login ให้เด้งไปหน้าแรก
         return(
             <Container className="containBox">
                 {
@@ -222,7 +193,7 @@ class Exam extends Component {
                                         : this.state.sec !== 0 ? 'เวลา ' + this.changeZeroSec(this.state.sec) + ' วินาที' : 'หมดเวลา'
                                 }
                             </p>
-                            <ProgressBar className="mb-2" striped variant={this.state.colorBar} now={(this.checkCount() * 100) / this.state.examLists.length} label={`${(this.checkCount() * 100) / this.state.examLists.length}%`} style={{ height: "10px" }} />
+                            <ProgressBar className="mb-2" striped variant={this.state.colorBar} now={(this.checkCount() * 100) / this.state.examLists.length} label={`${Math.round((this.checkCount() * 100) / this.state.examLists.length)}%`} style={{ height: "10px" }} />
                         </Col>
                     </Row>
                     <Row>
@@ -292,11 +263,4 @@ const mapStateToProps = (state) => {
         stateFromStore: state.data
     }
 }
-const mapDispatchToProps = dispatch => {
-    return {
-        dispatchFromStore: (dataLogin) => {
-            return dispatch({ type: 'ADD_DATA', playload: dataLogin })
-        }
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Exam)
+export default connect(mapStateToProps, null)(Exam)

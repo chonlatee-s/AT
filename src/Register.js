@@ -4,7 +4,41 @@ import {NavLink, Redirect} from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { connect } from 'react-redux'
+import axios from 'axios'
+
 class Register extends Component {
+
+    RegisterLoginSentData = (dataLogin) => {
+        // ลงทะเบียนเข้าฐานข้อมูล 
+        let qs = require('qs');
+        var base64 = require('base-64');
+        var utf8 = require('utf8');
+
+        // เช็คว่ามีการลงทะเบียนหรือยัง
+        // axios.get(`http://localhost/at_exam/getIdRegis.php?UserId=${dataLogin.UserId}`) 
+        axios.get(`${window.location.origin}/getIdRegis.php?UserId=${dataLogin.UserId}`)
+        .then((res) => {
+
+            var bytes = base64.decode(res.data);
+            var text = utf8.decode(bytes);
+            var data = JSON.parse(text)
+
+            if(data.length === 0) { // ถ้ายังไม่ลงทะเบียน ให้นำข้อมูลไปลงทะเบียน
+                // axios.post(`http://localhost/at_exam/sentUser.php`, qs.stringify(dataLogin))
+                axios.post(`${window.location.origin}/sentUser.php`, qs.stringify(dataLogin)) // encode ให้อยู่ในรูปแบบของ String
+                .then((res) => {
+                    this.props.dispatchFromStore(dataLogin) // เก็บข้อมูลใน DB สำเร็จก่อน ค่อยเอาไปเก็บใน store
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }else { // ถ้ามี เอาข้อมูลมาใช้
+                dataLogin.Plan = data[0].plan
+                this.props.dispatchFromStore(dataLogin)
+            }
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
 
     responseGoogle = (res) => {
         let dataLogin = {
@@ -12,9 +46,10 @@ class Register extends Component {
             Name: res.profileObj.name,
             Profile: res.profileObj.imageUrl,
             IsLoggedIn: true,
-            type: 'google'
+            Plan: '1',
+            Type: 'google'
         }
-        this.props.dispatchFromStore(dataLogin)
+        this.RegisterLoginSentData(dataLogin) // เรียกใช้ฟังก์ชันลงทะเบียน
     }
 
     responseFacebook = (res) => {
@@ -23,15 +58,22 @@ class Register extends Component {
             Name: res.name,
             Profile: res.picture.data.url,
             IsLoggedIn: true,
-            type: 'facebook'
+            Plan: '1',
+            Type: 'facebook'
         }
-        this.props.dispatchFromStore(dataLogin)
+        this.RegisterLoginSentData(dataLogin)
     }
+
     render() {
         const dataStore = this.props.stateFromStore
         if(dataStore.IsLoggedIn) return <Redirect to='/Exam' />
         return (
             <Container className="containBox">
+                <Row>
+                    <Col className="text-center">
+                        <i><p style={{marginTop:'20px', marginBottom:'30px', color:"#627498", fontWeight:"500", fontSize:"16px"}}>printf ( " แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์ " ) ;</p></i>
+                    </Col>
+                </Row>
                 <Row className="justify-content-md-center text-center">
                     <Col md={6}>
                         <Alert style={{backgroundColor:"#f6fff6"}}>
@@ -81,11 +123,6 @@ class Register extends Component {
                         <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>รับสิทธิ์เข้าใช้งาน</span></NavLink>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="text-center">
-                        <i><p style={{marginTop:'40px', marginBottom:'0px', color:"#697f69", fontWeight:"300", fontSize:"16px"}}>printf ( " Hello World ! เอกคอมพิวเตอร์ " ) ;</p></i>
                     </Col>
                 </Row>
             </Container>

@@ -12,7 +12,7 @@ class Topic extends Component {
                 <Row className="justify-content-md-center">
                     <Col md="12" lg="3" className="text-center mb-2">
                         <Col mx="auto">
-                            <Image src={welcome} className="img-fluid" width="130px" alt="คอมพิวเตอร์" />
+                            <Image src={welcome} className="img-fluid" width="110px" alt="คอมพิวเตอร์" />
                         </Col>
                         <p style={{marginTop:'5px', marginBottom:'0px', color:"#697f69", fontWeight:"800", fontSize:"14px"}}>printf("hello world");</p>
                     </Col>

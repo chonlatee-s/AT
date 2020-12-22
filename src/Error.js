@@ -1,5 +1,5 @@
 import React from 'react';
-import fail from './img/404.png';
+import fail from './img/404.jpg';
 import {Container, Row, Col, Image} from 'react-bootstrap'
 function Error() {
   return (

@@ -52,7 +52,7 @@ class Plans extends Component {
                                 </Card.Footer>
                             </Card>
                         </CardDeck>
-                        <p style={{fontSize:'12px', fontWeight:'300', margin:'8px 0px 0px 0px', textAlign:'center', color:'#e7400d'}}>" ราคาพิเศษ ถึง 30 เมษายน 2564"</p>
+                        <p style={{fontSize:'12px', fontWeight:'300', margin:'8px 0px 0px 0px', textAlign:'center', color:'#e7400d'}}>" ราคาพิเศษ 1 มกราคม - 30 เมษายน 2564"</p>
                     </Col>
                 </Row>
             </Container>
