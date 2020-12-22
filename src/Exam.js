@@ -25,18 +25,18 @@ class Exam extends Component {
     }
 ////////////////// step 1 pull exam /////////////////////////////
     getExam = () => {
-       
+        const dataStore = this.props.stateFromStore
         let exam = []
-        var base64 = require('base-64');
-        var utf8 = require('utf8');
+        const base64 = require('base-64');
+        const utf8 = require('utf8');
 
         // axios.get(`http://localhost/at_exam/getExams.php`)
-        axios.get(`${window.location.origin}/getExams.php`)
+        axios.get(`${window.location.origin}/getExams.php?Plan=${dataStore.Plan}`)
             .then((res) => {
 
-                var bytes = base64.decode(res.data);
-                var text = utf8.decode(bytes);
-                var data = JSON.parse(text)
+                const bytes = base64.decode(res.data);
+                const text = utf8.decode(bytes);
+                const data = JSON.parse(text)
                 exam = data.map((item) => {
                     return {
                         id: item.id,
@@ -248,7 +248,7 @@ class Exam extends Component {
                                 <Spinner animation="grow" variant="danger" />
                                 <Spinner animation="grow" variant="warning" />
 
-                                <p style={{ fontSize: "16px", marginTop:"10px" }}>{this.state.showText ? 'ไม่พบข้อมูล' : 'กรุณารอสักครู่'}</p>
+                                <p style={{ fontSize: "16px", marginTop:"10px" }}>{this.state.showText ? 'ไม่พบข้อมูล โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต' : 'กรุณารอสักครู่'}</p>
                             </Col>
                         </Row>
                 }

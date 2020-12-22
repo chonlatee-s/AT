@@ -11,19 +11,19 @@ class Register extends Component {
     RegisterLoginSentData = (dataLogin) => {
         // ลงทะเบียนเข้าฐานข้อมูล 
         let qs = require('qs');
-        var base64 = require('base-64');
-        var utf8 = require('utf8');
+        const base64 = require('base-64');
+        const utf8 = require('utf8');
 
         // เช็คว่ามีการลงทะเบียนหรือยัง
         // axios.get(`http://localhost/at_exam/getIdRegis.php?UserId=${dataLogin.UserId}`) 
         axios.get(`${window.location.origin}/getIdRegis.php?UserId=${dataLogin.UserId}`)
         .then((res) => {
 
-            var bytes = base64.decode(res.data);
-            var text = utf8.decode(bytes);
-            var data = JSON.parse(text)
-
-            if(data.length === 0) { // ถ้ายังไม่ลงทะเบียน ให้นำข้อมูลไปลงทะเบียน
+            const data = res.data; 
+            if(data) { // ถ้ามี เอาข้อมูลมาใช้
+                dataLogin.Plan = data.plan
+                this.props.dispatchFromStore(dataLogin)
+            }else { // ถ้ายังไม่ลงทะเบียน ให้นำข้อมูลไปลงทะเบียน ถ้าไม่มีข้อมูลจะ return false
                 // axios.post(`http://localhost/at_exam/sentUser.php`, qs.stringify(dataLogin))
                 axios.post(`${window.location.origin}/sentUser.php`, qs.stringify(dataLogin)) // encode ให้อยู่ในรูปแบบของ String
                 .then((res) => {
@@ -31,9 +31,6 @@ class Register extends Component {
                 }).catch((err) => {
                     console.log(err)
                 })
-            }else { // ถ้ามี เอาข้อมูลมาใช้
-                dataLogin.Plan = data[0].plan
-                this.props.dispatchFromStore(dataLogin)
             }
         }).catch((err) => {
             console.log(err)
@@ -71,7 +68,7 @@ class Register extends Component {
             <Container className="containBox">
                 <Row>
                     <Col className="text-center">
-                        <i><p style={{marginTop:'20px', marginBottom:'30px', color:"#627498", fontWeight:"500", fontSize:"16px"}}>printf ( " แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์ " ) ;</p></i>
+                        <i><p style={{marginTop:'20px', marginBottom:'30px', color:"#627498", fontWeight:"500", fontSize:"14px"}}>printf ( " แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์ " ) ;</p></i>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center text-center">
