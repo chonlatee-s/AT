@@ -251,7 +251,7 @@ class Exam extends Component {
                                 <Spinner animation="grow" variant="danger" />
                                 <Spinner animation="grow" variant="warning" />
 
-                                <p style={{ fontSize: "16px", marginTop:"10px" }}>{this.state.showText ? 'ไม่พบข้อมูล โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต' : 'กรุณารอสักครู่'}</p>
+                                <p style={{ fontSize: "16px", marginTop:"10px", color:'#627498' }}>{this.state.showText ? 'ไม่พบข้อมูล' : 'กรุณารอสักครู่'}</p>
                             </Col>
                         </Row>
                 }
