@@ -13,12 +13,12 @@ class AboutMe extends Component {
                         <Col mx="auto">
                             <Image src={profile} className="img-fluid profile" width="80px" alt="คอมพิวเตอร์" />
                         </Col>
-                        <p style={{marginTop:'10px', marginBottom:'0px', color:"#697f69", fontWeight:"800", fontSize:"18px"}}>ชลธี สินสาตร์</p>
+                        <p style={{marginTop:'10px', marginBottom:'0px', color:"#697f69", fontWeight:"300", fontSize:"14px"}}>ชลธี สินสาตร์</p>
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">
                             <p className="txtHead">การศึกษา</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> ESL Program City College of San Francisco</p>
+                            <p className="txtDetail"><i className='far fa-check-circle'></i> ESL Program, City College of San Francisco</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> ปริญญาตรี สาขาเทคโนโลยีคอมพิวเตอร์ คณะครุศาสตร์อุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
                             <p className="txtHead">ประสบการณ์ด้านคอมพิวเตอร์</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เป็นหนึ่งในทีมของสถาบันสหกิจศึกษาและพัฒนาสื่ออิเล็กทรอนิกส์ไทย-เยอรมัน ออกแบบและพัฒนาเกมการแข่งขัน ตอบปัญหาทางธรรมะ ในงานวันวิสาขบูชาโลก</p>

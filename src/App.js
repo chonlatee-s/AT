@@ -32,7 +32,7 @@ function App() {
           <Route exact={true} path="/Exam" component={Exam} />
           <Route exact={true} path="/AboutMe" component={AboutMe} />
           <Route exact={true} path="/Policy" component={Policy} />
-          <Route exact={true} path="/Detail" component={Topic} />
+          <Route exact={true} path="/Topic" component={Topic} />
           <Route exact={true} path="/Expire" component={Expire} />
           <Route component={Error} />
         </Switch>
