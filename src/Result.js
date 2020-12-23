@@ -27,7 +27,7 @@ class Result extends Component {
                         <h6><Badge variant="success"> {dataStore.Plan === '1' ? 'แบบที่ 1 ใช้งานฟรี' : dataStore.Plan === '2' ? 'แบบที่ 2 อุ่นใจ' : 'แบบที่ 3 คู่ใจ' } </Badge></h6>
                         <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>
                             {
-                                dataStore.Plan != 1 ? dataStore.date_exp : null
+                                dataStore.Plan !== 1 ? dataStore.date_exp : null
                             }
                         </p>
                     </Col>
@@ -37,6 +37,7 @@ class Result extends Component {
                                 this.props.result.map((item,index)=>{
                                     return (
                                         <div key={index}>
+                                            { item.img  === "" ? null :<Image src = {item.img} style={{marginBottom:'10px', width:'100px'}}/> }
                                             <p className="question"  style={{color:'#34476c'}}>ข้อ {index+1} {item.question}</p>
                                             <p className="result" style={{color:'#34476c'}}><span style={{color:"#5b785b"}}>ตอบ</span> 
                                                 {

@@ -37,6 +37,7 @@ class Exam extends Component {
                 const bytes = base64.decode(res.data);
                 const text = utf8.decode(bytes);
                 const data = JSON.parse(text)
+
                 exam = data.map((item) => {
                     return {
                         id: item.id,
@@ -47,6 +48,7 @@ class Exam extends Component {
                         ch4: item.ch4,
                         answer: item.answer,
                         ref: item.ref,
+                        img: item.img,
                         reply: '0', // เพิ่มมาใหม่ เพื่อเก็บคำตอบ
                         check: false
                     }
@@ -118,6 +120,7 @@ class Exam extends Component {
             ch4: data.ch4,
             answer: data.answer,
             ref: data.ref,
+            img: data.img,
             reply: data.reply,
             check: data.check
         }

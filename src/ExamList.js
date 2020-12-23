@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ListGroup from 'react-bootstrap/ListGroup'
+import {ListGroup, Image} from 'react-bootstrap'
 
 class ExamList extends Component {
     mange = (e) => {
@@ -12,6 +12,7 @@ class ExamList extends Component {
             ch4 : this.props.questionAll.ch4, 
             answer : this.props.questionAll.answer, 
             ref: this.props.questionAll.ref,
+            img:  this.props.questionAll.img,
             reply : e.currentTarget.id,
             check: this.props.questionAll.answer===e.currentTarget.id?true:false // ตรวจถูกผิดตรงนี้ได้เลย  ไม่ต้องส่งไปตรวจเซิร์ฟเวอร์ เปลืองโหลด
         }
@@ -49,9 +50,10 @@ class ExamList extends Component {
             s3 = {color:'#5b785b'}
             s4 = {color:'#5b785b'}
         }
-
+  
         return (
             <ListGroup variant="flush">
+                { this.props.questionAll.img  === "" ? null :<div className="text-center"><Image src = {this.props.questionAll.img} style={{margin:'15px', width:'140px'}}/></div> }
                 <ListGroup.Item  style={{backgroundColor:"#697f69", color:"#fff"}}><span style={{fontWeight:500, fontSize:"18px"}}>ข้อ { this.props.number+1 } { this.props.questionAll.question }</span></ListGroup.Item>
                     <ListGroup.Item  style={{cursor:"pointer", fontWeight:300}} id="1" onClick = { this.mange } action as="div">
                         <span style={s1}>ก. { this.props.questionAll.ch1 }</span>

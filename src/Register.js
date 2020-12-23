@@ -17,7 +17,6 @@ class Register extends Component {
         axios.get(`${window.location.origin}/getIdRegis.php?UserId=${dataLogin.UserId}`)
         .then((res) => {
             const data = res.data; 
-            console.log(data)
             if(data) { // ถ้ามี เอาข้อมูลมาใช้
                 dataLogin.Plan = data.plan
                 dataLogin.check_date_exp = data.check_date_exp
