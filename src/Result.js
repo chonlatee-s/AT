@@ -25,7 +25,11 @@ class Result extends Component {
                         <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${Math.round((this.props.score*100)/this.props.result.length)}%`} style={{height: "10px"}}/>
                     </Alert>
                         <h6><Badge variant="success"> {dataStore.Plan === '1' ? 'แบบที่ 1 ใช้งานฟรี' : dataStore.Plan === '2' ? 'แบบที่ 2 อุ่นใจ' : 'แบบที่ 3 คู่ใจ' } </Badge></h6>
-                        <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>หากมีข้อสงสัย กรุณาติดต่อผู้ดูแลระบบ</p>
+                        <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>
+                            {
+                                dataStore.Plan != 1 ? dataStore.date_exp : null
+                            }
+                        </p>
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">

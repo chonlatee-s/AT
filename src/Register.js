@@ -21,6 +21,7 @@ class Register extends Component {
             if(data) { // ถ้ามี เอาข้อมูลมาใช้
                 dataLogin.Plan = data.plan
                 dataLogin.check_date_exp = data.check_date_exp
+                dataLogin.date_exp = `ใช้งานได้ถึง ${data.day}-${data.month}-${Number(data.year)+543}`
                 this.props.dispatchFromStore(dataLogin)
             }else { // ถ้ายังไม่ลงทะเบียน ให้นำข้อมูลไปลงทะเบียน ถ้าไม่มีข้อมูลจะ return false
                 // axios.post(`http://localhost/at_exam/sentUser.php`, qs.stringify(dataLogin))
