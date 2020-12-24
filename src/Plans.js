@@ -17,7 +17,7 @@ class Plans extends Component {
                                 <Card.Body>
                                     <Card.Title className="txtCardHead">แบบที่ 1 ใช้งานฟรี</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-30 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-50 ข้อ</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
