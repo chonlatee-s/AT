@@ -15,9 +15,10 @@ class Plans extends Component {
                         <CardDeck>
                             <Card className="cardPlan1">
                                 <Card.Body>
-                                    <Card.Title className="txtCardHead">แบบที่ 1 ใช้งานฟรี</Card.Title>
+                                    <Card.Title className="txtCardHead">แบบที่ 1 ทดลองใช้ฟรี</Card.Title>
                                     <Card.Text>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-50 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ทันที ไม่ต้องขอรับสิทธิ์</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -30,7 +31,7 @@ class Plans extends Component {
                                     <Card.Text>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-500 ข้อ</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งาน 1 ปี</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ 1 ปี</p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -43,7 +44,7 @@ class Plans extends Component {
                                     <Card.Text>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1,000 ข้อ ขึ้นไป</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งาน 2 ปี</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ 2 ปี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;<span>พิเศษ สมัครเป็นคู่ลดเหลือ 69 บาท</span></p>
                                     </Card.Text>
                                 </Card.Body>
