@@ -37,7 +37,7 @@ class Result extends Component {
                                 this.props.result.map((item,index)=>{
                                     return (
                                         <div key={index}>
-                                            { item.img  === "" ? null :<Image src = {item.img} style={{marginBottom:'10px', width:'300px'}}/> }
+                                            { item.img  === "" ? null :<Image src = {item.img} style={{marginBottom:'10px', width:'200px'}}/> }
                                             <p className="question"  style={{color:'#34476c'}}>ข้อ {index+1} {item.question}</p>
                                             <p className="result" style={{color:'#34476c'}}><span style={{color:"#5b785b"}}>ตอบ</span> 
                                                 {

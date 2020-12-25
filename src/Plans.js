@@ -65,10 +65,10 @@ class Plans extends Component {
                     <Col mx="auto" className="text-center" style={{color:"#5b785b"}}>
                         <Alert style={{backgroundColor:"#f6fff6"}}>
                             <i className='fab fa-facebook'></i>
-                            <span style={{fontSize:"14px", fontWeight:'300'}}> <a href="https://facebook.com/groups/224616649206338/" target="_blank" rel="noreferrer">ผู้ดูแลกลุ่ม สอบครูผู้ช่วย เอกคอมพิวเตอร์ (นายโรบอท.com)</a></span>
-                            {/* &nbsp;&nbsp; หรือ &nbsp;&nbsp;
+                            <span style={{fontSize:"14px", fontWeight:'300'}}> <a href="https://facebook.com/chonlatee.sinsart/" target="_blank" rel="noreferrer">Chonlatee Sinsart</a></span>
+                            &nbsp;&nbsp; หรือ &nbsp;&nbsp;
                             <i className='fas fa-phone-square'></i> 
-                            <span style={{fontSize:"14.5px", fontWeight:'300'}}> 08-2781-8941 (ชล)</span> */}
+                            <span style={{fontSize:"14.5px", fontWeight:'300'}}> 08-2781-8941 (ชล)</span>
                         </Alert>
                     </Col>
                 </Row>
