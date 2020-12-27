@@ -17,7 +17,8 @@ class Plans extends Component {
                                 <Card.Body>
                                     <Card.Title className="txtCardHead">แบบที่ 1 ทดลองใช้ฟรี</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-50 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1 - 50 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ดาวน์โหลดเอกสารต่าง ๆ ฟรี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ทันที ไม่ต้องขอรับสิทธิ์</p>
                                     </Card.Text>
                                 </Card.Body>
@@ -29,8 +30,9 @@ class Plans extends Component {
                                 <Card.Body>
                                     <Card.Title className="txtCardHead">แบบที่ 2 อุ่นใจ</Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1-500 ข้อ</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1 - 500 ข้อ</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ดาวน์โหลดเอกสารต่าง ๆ ฟรี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ 1 ปี</p>
                                     </Card.Text>
                                 </Card.Body>
@@ -44,6 +46,7 @@ class Plans extends Component {
                                     <Card.Text>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1,000 ข้อ ขึ้นไป</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ดาวน์โหลดเอกสารต่าง ๆ ฟรี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ 2 ปี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;<span>พิเศษ สมัครเป็นคู่ลดเหลือ 69 บาท</span></p>
                                     </Card.Text>
@@ -53,7 +56,7 @@ class Plans extends Component {
                                 </Card.Footer>
                             </Card>
                         </CardDeck>
-                        <p style={{fontSize:'12px', fontWeight:'300', margin:'8px 0px 0px 0px', textAlign:'center', color:'#e7400d'}}>" ราคาพิเศษ 25 ธันวาคม 2563 - 30 เมษายน 2564 "</p>
+                        <p style={{fontSize:'12px', fontWeight:'300', margin:'8px 0px 0px 0px', textAlign:'center', color:'#e7400d'}}>" ราคาพิเศษ 1 มกราคม - 31 มีนาคม 2564 "</p>
                     </Col>
                 </Row>
             </Container>
@@ -67,9 +70,9 @@ class Plans extends Component {
                         <Alert style={{backgroundColor:"#f6fff6"}}>
                             <i className='fab fa-facebook'></i>
                             <span style={{fontSize:"14px", fontWeight:'300'}}> <a href="https://facebook.com/chonlatee.sinsart/" target="_blank" rel="noreferrer">Chonlatee Sinsart</a></span>
-                            &nbsp;&nbsp; หรือ &nbsp;&nbsp;
+                            &nbsp; หรือ &nbsp;
                             <i className='fas fa-phone-square'></i> 
-                            <span style={{fontSize:"14.5px", fontWeight:'300'}}> 08-2781-8941 (ชล)</span>
+                            <span style={{fontSize:"14px", fontWeight:'300'}}> 08-2781-8941 (ชล)</span>
                         </Alert>
                     </Col>
                 </Row>

@@ -11,6 +11,7 @@ import Policy from './Policy';
 import Topic from './Topic';
 import Error from './Error';
 import Expire from './Expire';
+import Download from './Download';
 
 //redux
 import { createStore } from 'redux'
@@ -34,6 +35,7 @@ function App() {
           <Route exact={true} path="/Policy" component={Policy} />
           <Route exact={true} path="/Topic" component={Topic} />
           <Route exact={true} path="/Expire" component={Expire} />
+          <Route exact={true} path="/Download" component={Download} />
           <Route component={Error} />
         </Switch>
         <Bar/>
