@@ -152,6 +152,12 @@ a:active {
 .showTextMenu{
   display: none;
 }
+.codeComment{
+  color:#697f69;
+  margin-bottom: 15px;
+  font-weight: 300;
+  font-size: 14px;
+}
 @media (max-width: 767.98px) { 
   .btnFull {width: 100%}
   .showTextMenu{

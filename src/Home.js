@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Register from './Register';
+import Welcome from './Welcome';
 
 
 class Home extends Component {
     render() {
         return(
-            <Register/>
+            <Welcome/>
         );
     }
 }
