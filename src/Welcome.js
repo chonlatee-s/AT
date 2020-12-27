@@ -42,7 +42,7 @@ class Welcome extends Component {
                                 (this.state.answer2) ? 
                                     <Alert variant="info">
                                         <Alert.Heading> ยินดีที่ได้พบกันอีกครั้ง </Alert.Heading>
-                                        <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ถ้าเข้าใจสิทธิ์การใช้งานแล้ว</span></NavLink> &nbsp;
+                                        <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>ถ้าเข้าใจสิทธิ์การใช้งานแล้ว</span></NavLink> &nbsp;
                                         <NavLink to="/RegisterAndTest"><span style={{fontSize:'12px', fontWeight:'300'}}>เริ่มทำแบบทดสอบได้เลย</span></NavLink> 
                                     </Alert>
                                     : null
