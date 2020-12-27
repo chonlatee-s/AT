@@ -20,15 +20,15 @@ class Menu extends Component {
                             <Button variant="info" className="btn btnFull mt-2" style={{marginRight:"10px"}}> รับสิทธิ์เข้าใช้งาน</Button>
                         </NavLink>
                         <NavLink to="/Download">
-                            <i className='fas fa-download showIcon' style={{fontSize:"30px", margin:"9px 0px 10px 10px", color:"#697f69"}}></i>
+                            <i className='fas fa-download showIcon' style={{fontSize:"30px", margin:"9px 0px 15px 15px", color:"#697f69"}}></i>
                             <Button variant="info" className="btn btnFull mt-2 showTextMenu" style={{marginRight:"10px"}}> ดาวน์โหลด</Button>
                         </NavLink>
                         <NavLink to="/Topic">
-                            <i className='far fa-file-alt showIcon' style={{fontSize:"30px", margin:"9px 0px 10px 10px", color:"#697f69"}}></i>
+                            <i className='far fa-file-alt showIcon' style={{fontSize:"30px", margin:"9px 0px 15px 20px", color:"#697f69"}}></i>
                             <Button variant="info" className="btn btnFull mt-2 showTextMenu" style={{marginRight:"10px"}}> เนื้อหาที่ออกสอบ</Button>
                         </NavLink>
                         <NavLink to="/AboutMe">
-                            <i className='far fa-user-circle showIcon' style={{fontSize:"32px", margin:"9px 0px 10px 10px", color:"#697f69"}}></i>
+                            <i className='far fa-user-circle showIcon' style={{fontSize:"32px", margin:"9px 0px 15px 20px", color:"#697f69"}}></i>
                             <Button variant="info" className="btn btnFull mt-2 showTextMenu" style={{marginRight:"10px"}}> ผู้ก่อตั้งเว็บไซต์</Button>
                         </NavLink>
                     </div>
