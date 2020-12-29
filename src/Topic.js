@@ -32,7 +32,7 @@ class Topic extends Component {
                             <p className="txtDetail"><i className='far fa-check-circle'></i> กฏหมายที่เกี่ยวข้องกับคอมพิวเตอร์</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีสารสนเทศและการสื่อสาร</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีดิจิทัล</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีปัญญาประดิษฐ์และบิ๊กดาต้า</p>
+                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
                             <p></p>
                             <p className="txtDetail">ขอบคุณที่มาร่วมเป็นส่วนหนึ่งในการทำข้อสอบไปกับเรา</p>
                         </div>

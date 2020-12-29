@@ -1,63 +1,49 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Alert, Button  } from 'react-bootstrap';
+import { Container, Row, Col, Alert  } from 'react-bootstrap';
 import {NavLink, Redirect} from 'react-router-dom';
-import GoogleLogin from 'react-google-login';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { connect } from 'react-redux'
 import axios from 'axios'
 
 class Register extends Component {
 
-    RegisterLoginSentData = (dataLogin) => {
-        // ลงทะเบียนเข้าฐานข้อมูล 
-        let qs = require('qs');
+    state = {
+        showStatusLogin : false
+    }
 
-        // เช็คว่ามีการลงทะเบียนหรือยัง
-        // axios.get(`http://localhost/at_exam/getIdRegis.php?UserId=${dataLogin.UserId}`) 
-        axios.get(`${window.location.origin}/getIdRegis.php?UserId=${dataLogin.UserId}`)
+    checkLogin = () => {
+        const base64 = require('base-64');
+        const utf8 = require('utf8');
+        let dataLogin = {
+            name: '',
+            IsLoggedIn: '',
+            plan: ''
+        }
+        const email = document.getElementById('email').value
+        const password = base64.encode(utf8.encode(document.getElementById('password').value))
+
+        // axios.get(`http://localhost/at_exam/checkUser.php?email=${email}&password=${password}`) 
+        axios.get(`${window.location.origin}/checkUser.php?email=${email}&password=${password}`)
         .then((res) => {
-            const data = res.data; 
-            if(data) { // ถ้ามี เอาข้อมูลมาใช้
-                dataLogin.Plan = data.plan
-                dataLogin.check_date_exp = data.check_date_exp
-                dataLogin.date_exp = `ใช้งานได้ถึง ${data.day}-${data.month}-${Number(data.year)+543}`
+            if(res.data===false) this.setState({showStatusLogin:true}) // Login ไม่สำเร็จ
+            else {
+                dataLogin.name = res.data.name
+                dataLogin.IsLoggedIn = true
+                dataLogin.plan = res.data.plan
+                dataLogin.check_date_exp = res.data.check_date_exp
+                dataLogin.date_exp = `ใช้งานได้ถึง ${res.data.day}-${res.data.month}-${Number(res.data.year)+543}`
                 this.props.dispatchFromStore(dataLogin)
-            }else { // ถ้ายังไม่ลงทะเบียน ให้นำข้อมูลไปลงทะเบียน ถ้าไม่มีข้อมูลจะ return false
-                // axios.post(`http://localhost/at_exam/sentUser.php`, qs.stringify(dataLogin))
-                axios.post(`${window.location.origin}/sentUser.php`, qs.stringify(dataLogin)) // encode ให้อยู่ในรูปแบบของ String
-                .then((res) => {
-                    this.props.dispatchFromStore(dataLogin) // เก็บข้อมูลใน DB สำเร็จก่อน ค่อยเอาไปเก็บใน store
-                }).catch((err) => {
-                    console.log(err)
-                })
             }
         }).catch((err) => {
             console.log(err)
         })
     }
-
-    responseGoogle = (res) => {
+    guestFree = () => {
         let dataLogin = {
-            UserId: res.googleId,
-            Name: res.profileObj.name,
-            Profile: res.profileObj.imageUrl,
+            name: 'ผู้ใช้ทั่วไป',
             IsLoggedIn: true,
-            Plan: '1',
-            Type: 'google'
+            plan: '1'
         }
-        this.RegisterLoginSentData(dataLogin) // เรียกใช้ฟังก์ชันลงทะเบียน
-    }
-
-    responseFacebook = (res) => {
-        let dataLogin = {
-            UserId: res.userID,
-            Name: res.name,
-            Profile: res.picture.data.url,
-            IsLoggedIn: true,
-            Plan: '1',
-            Type: 'facebook'
-        }
-        this.RegisterLoginSentData(dataLogin)
+        this.props.dispatchFromStore(dataLogin)
     }
 
     render() {
@@ -71,55 +57,17 @@ class Register extends Component {
         return (
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
-                    <Col md={6}>
-                        <i><p style={{marginTop:'20px', marginBottom:'30px', color:"#17a2b8", fontWeight:"500", fontSize:"14px"}}>printf ( " แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์ " ) ;</p></i>
-                    </Col>
-                </Row>
-                <Row className="justify-content-md-center text-center">
                     <Col md={5}>
                         <Alert style={{backgroundColor:"#f6fff6"}}>
-                            <h5 className="topic2">ลงทะเบียนก่อนเข้าใช้งาน</h5>
-                            <GoogleLogin
-                                clientId="852604842596-qv0qnppmo8aoiolq4l3ifdi8hrq8p8d3.apps.googleusercontent.com"
-                                onSuccess={this.responseGoogle}
-                                render={renderProps => (
-                                   
-                                    <Button  onClick={renderProps.onClick} style={{
-                                        backgroundColor: "#ff5f5f",
-                                        color: "#ffffff",
-                                        border: 'none',
-                                        width: '100%',
-                                        height:'100%',
-                                        padding:'5px'
-                                    }}> 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-google" viewBox="0 0 16 16">
-                                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-                                    </svg>&nbsp;&nbsp;
-                                    ลงทะเบียน</Button >
-                                )}
-                            />
+                            <h5 className="topic2">เข้าสู่ระบบเพื่อทำข้อสอบ</h5>
+                            {
+                                (this.state.showStatusLogin) ? <p style={{margin:'10px', color:"#eb5749", fontWeight:"500", fontSize:"14px"}}> ไม่พบข้อมูล ตรวจสอบอีเมล และรหัสผ่านอีกครั้ง </p> : null
+                            }
+                            <input type="text" placeholder="อีเมล" className="login mb-2" id="email"/>
+                            <input type="password" placeholder="รหัสผ่าน (ลืมรหัสผ่าน ติดต่อแอดมิน)" className="login mb-2" id="password"/>
+                            <input type="button" className="btnLogin" value="เข้าสู่ระบบ" onClick={this.checkLogin}/>
                             <p className="txtLine"> &nbsp;&nbsp; หรือ &nbsp;&nbsp; </p>
-                            <FacebookLogin
-                                appId="1826695754154361"
-                                fields="name,email,picture"
-                                callback={this.responseFacebook}
-                                isMobile={false}
-                                render={renderProps => (
-                                    <Button onClick={renderProps.onClick} style={{
-                                        fontSize: '16px',
-                                        backgroundColor: "#395794",
-                                        color: "#ffffff",
-                                        border: 'none',
-                                        padding: '5px',
-                                        width: '100%',
-                                        height:'100%'
-                                    }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
-                                    <path fillRule="evenodd" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg> &nbsp;&nbsp; 
-                                    ลงทะเบียน</Button>
-                                )}
-                            />
+                            <input type="button" className="btnLoginFree" value="ทดลองใช้ฟรี" onClick={this.guestFree}/>
                         </Alert>
                         <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
                         &nbsp;&nbsp;&nbsp;&nbsp;

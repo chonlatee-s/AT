@@ -72,7 +72,7 @@ class Plans extends Component {
                             <span style={{fontSize:"14px", fontWeight:'300'}}> <a href="https://facebook.com/chonlatee.sinsart/" target="_blank" rel="noreferrer">Chonlatee Sinsart</a></span>
                             &nbsp; หรือ &nbsp;
                             <i className='fas fa-phone-square'></i> 
-                            <span style={{fontSize:"14px", fontWeight:'300'}}> 08-2781-8941 (ชล)</span>
+                            <span style={{fontSize:"14px", fontWeight:'300'}}> 08-2781-8941</span>
                         </Alert>
                     </Col>
                 </Row>

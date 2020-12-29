@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import {Container, Row, Col, ProgressBar, Button, Spinner, Image } from 'react-bootstrap'
+import {Container, Row, Col, ProgressBar, Button, Spinner } from 'react-bootstrap'
 import ExamList from './ExamList'
 import Result from './Result'
 import axios from 'axios'
@@ -30,8 +30,8 @@ class Exam extends Component {
         const base64 = require('base-64');
         const utf8 = require('utf8');
 
-        // axios.get(`http://localhost/at_exam/getExams.php`)
-        axios.get(`${window.location.origin}/getExams.php?Plan=${dataStore.Plan}`)
+        // axios.get(`http://localhost/at_exam/getExams.php?plan=${dataStore.plan}`)
+        axios.get(`${window.location.origin}/getExams.php?plan=${dataStore.plan}`)
             .then((res) => {
 
                 const bytes = base64.decode(res.data);
@@ -187,8 +187,7 @@ class Exam extends Component {
                     <Row>
                         <Col>
                             <div className="text-center">
-                                <Image src={dataStore.Profile} roundedCircle style={{ width: "50px", height: "50px", border: '2px solid #ddd' }} />
-                                <div style={{ fontSize: '12px', fontWeight: '300', paddingBottom: '5px', paddingTop: '1px' }}>{dataStore.Name}</div>
+                                <div style={{ fontSize: '12px', fontWeight: '300', paddingBottom: '5px', paddingTop: '1px' }}>{dataStore.name}</div>
                             </div>
                             <p style={{ fontSize: "16px", fontWeight: 500, margin: "3px", color: "#627498" }} className="text-center">
                                 {

@@ -17,19 +17,18 @@ class Result extends Component {
                 <Row>
                     <Col md="12" lg="3" className="text-center mb-2">
                     <div>
-                        <Image src ={dataStore.Profile} roundedCircle style={{width:"50px", height:"50px", border: '1px solid #ddd'}}/>
-                        <div style={{fontSize:'12px', fontWeight:'300', paddingBottom:'5px', paddingTop:'2px'}}>{dataStore.Name}</div>
+                        <div style={{fontSize:'12px', fontWeight:'300', paddingBottom:'5px', paddingTop:'2px'}}>{dataStore.name}</div>
                     </div>
                     <Alert style={{backgroundColor:"#697f69"}}>
                         <p style={{margin:"0px", fontSize:"21px", color:"#fff"}}>คะแนนรวม</p>
                         <p style={{fontSize:"60px", margin:"0px", color:"#fff"}}>{`${this.props.score}/${this.props.result.length}`}</p>
                         <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${Math.round((this.props.score*100)/this.props.result.length)}%`} style={{height: "10px"}}/>
                     </Alert>
-                        <h6><Badge variant="success"> {dataStore.Plan === '1' ? 'คุณใช้งานแบบที่ 1 ทดลองใช้ฟรี' : dataStore.Plan === '2' ? 'คุณใช้งานแบบที่ 2 อุ่นใจ' : 'คุณใช้งานแบบที่ 3 คู่ใจ' } </Badge></h6>
-                        <NavLink to="/PlansAndContact"><p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px", color:'#e7400d'}}> {dataStore.Plan === '1' ? 'รับสิทธิ์เพิ่มเติม' : null} </p></NavLink>
+                        <h6><Badge variant="success"> {dataStore.plan === '1' ? 'คุณใช้งานแบบที่ 1 ทดลองใช้ฟรี' : dataStore.plan === '2' ? 'คุณใช้งานแบบที่ 2 อุ่นใจ' : 'คุณใช้งานแบบที่ 3 คู่ใจ' } </Badge></h6>
+                        <NavLink to="/PlansAndContact"><p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px", color:'#e7400d'}}> {dataStore.plan === '1' ? 'รับสิทธิ์เพิ่มเติม' : null} </p></NavLink>
                         <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>
                             {
-                                dataStore.Plan !== '1' ? dataStore.date_exp : null
+                                dataStore.plan !== '1' ? dataStore.date_exp : null
                             }
                         </p>
                     </Col>
