@@ -80,7 +80,7 @@ class Register extends Component {
                         <Alert style={{backgroundColor:"#f6fff6"}}>
                             <h5 className="topic2">ลงทะเบียนก่อนเข้าใช้งาน</h5>
                             <GoogleLogin
-                                clientId="254303991922-nigsnvlpreviefu3elonr5seecbc95af.apps.googleusercontent.com"
+                                clientId="852604842596-qv0qnppmo8aoiolq4l3ifdi8hrq8p8d3.apps.googleusercontent.com"
                                 onSuccess={this.responseGoogle}
                                 render={renderProps => (
                                    
