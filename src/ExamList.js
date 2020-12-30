@@ -53,7 +53,7 @@ class ExamList extends Component {
   
         return (
             <ListGroup variant="flush">
-                { this.props.questionAll.img  === "" ? null :<div className="text-center"><Image src = {this.props.questionAll.img} style={{margin:'10px', width:'300px'}}/></div> }
+                { this.props.questionAll.img  === "" ? null :<div className="text-center"><Image src = {this.props.questionAll.img} style={{margin:'10px', width:'250px'}}/></div> }
                 <ListGroup.Item  style={{backgroundColor:"#697f69", color:"#fff"}}><span style={{fontWeight:500, fontSize:"18px"}}>ข้อ { this.props.number+1 } { this.props.questionAll.question }</span></ListGroup.Item>
                     <ListGroup.Item  style={{cursor:"pointer", fontWeight:300}} id="1" onClick = { this.mange } action as="div">
                         <span style={s1}>ก. { this.props.questionAll.ch1 }</span>

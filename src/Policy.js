@@ -36,7 +36,7 @@ class Policy extends Component {
                             <hr/>
                             <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>รับสิทธิ์เข้าใช้งาน</span></NavLink>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <NavLink to="/RegisterAndTest"><span style={{fontSize:'12px', fontWeight:'300'}}>เริ่มทำแบบทดสอบ</span></NavLink>
+                            <NavLink to="/RegisterAndTest"><span style={{fontSize:'12px', fontWeight:'300'}}>ทำแบบทดสอบ</span></NavLink>
                             
                             
                             

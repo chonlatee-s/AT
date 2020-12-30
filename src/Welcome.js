@@ -33,7 +33,7 @@ class Welcome extends Component {
                                 (this.state.answer1) ? 
                                     <Alert variant="success">
                                         <h6> ยินดีที่ได้รู้จักครับ </h6>
-                                        <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>กรุณาอ่าน ข้อตกลงการใช้งาน</span></NavLink>
+                                        <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>อ่านข้อตกลงการใช้งาน</span></NavLink>
                                     </Alert>
                                     : null
                             }
