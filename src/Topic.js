@@ -34,7 +34,7 @@ class Topic extends Component {
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีดิจิทัล</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
                             <p></p>
-                            <p className="txtDetail">ขอบคุณที่มาร่วมเป็นส่วนหนึ่งในการทำข้อสอบไปกับเรา</p>
+                            <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 1 มกราคม 2564</p>
                         </div>
                     </Col>
                 </Row>
