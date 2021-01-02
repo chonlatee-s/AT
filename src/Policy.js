@@ -32,6 +32,7 @@ class Policy extends Component {
                             ขอให้ผู้ทดสอบฝึกทำข้อสอบบ่อย ๆ จนขึ้นใจ รับรองว่าวิชาเอกจะไม่ใช่เรื่องยากอีกต่อไป หากมีเวลาว่างเมื่อไหร่ก็แวะมา เราพร้อมเปิดรอเสมอ สุดท้ายนี้ ขอให้โชคดีมีชัยในการสอบด้วยเทอญ
                             </p>
                             <p/>
+                            <p className="txtDetail">หากมีข้อสงสัย คำแนะนำ หรือคำติชมใด ๆ แจ้งได้ที่อีเมล kruchonlatee@gmail.com</p>
                             <p className="txtDetail">ผู้ดูแลระบบ</p>
                             <hr/>
                             <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>รับสิทธิ์เข้าใช้งาน</span></NavLink>

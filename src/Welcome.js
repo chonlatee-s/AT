@@ -13,7 +13,10 @@ class Welcome extends Component {
         return(
             <Container className="containBox">
                 <Row className="justify-content-md-center">
-                    <Col><h5 className="topic text-center">แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์</h5></Col>
+                    <Col>
+                        <h5 className="topic text-center">แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์</h5>
+                        <p className="text-center" style={{color:'#eb5749'}}>เรียบเรียงโดย นายโรบอท.com</p>
+                    </Col>
                 </Row>
                 
                 <Row className="justify-content-md-center">
