@@ -44,7 +44,7 @@ class Plans extends Component {
                                 <Card.Body>
                                     <Card.Title className="txtCardHead">แบบที่ 3 คู่ใจ&nbsp;&nbsp;<Badge pill variant="warning">ยอดนิยม</Badge></Card.Title>
                                     <Card.Text>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบจำนวน 1,000 ข้อ ขึ้นไป</p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ข้อสอบมากกว่า 500 ข้อ ขึ้นไป</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ดาวน์โหลดเอกสารต่าง ๆ ฟรี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ 2 ปี</p>

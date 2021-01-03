@@ -58,7 +58,12 @@ class Register extends Component {
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
                     <Col md={5}>
-                        <Alert style={{backgroundColor:"#f6fff6"}}>
+                        <Alert style={{
+                            backgroundColor:"#f6fff6",
+                            padding: "12px",
+                            boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.10)",
+                            borderRadius: "5px"
+                        }}>
                             <h5 className="topic2">เข้าสู่ระบบเพื่อทำข้อสอบ</h5>
                             {
                                 (this.state.showStatusLogin) ? <p style={{margin:'10px', color:"#eb5749", fontWeight:"500", fontSize:"14px"}}> ไม่พบข้อมูล ตรวจสอบอีเมล และรหัสผ่านอีกครั้ง </p> : null
