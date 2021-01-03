@@ -58,6 +58,8 @@ class Register extends Component {
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
                     <Col md={5}>
+                        <span style={{fontSize:'12px', fontWeight:'300'}}>เปิดใช้งานจริงวันที่ 16 มกราคม 2564</span>
+                        <p/>
                         <Alert style={{
                             backgroundColor:"#f6fff6",
                             padding: "12px",
