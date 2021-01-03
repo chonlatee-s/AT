@@ -16,7 +16,6 @@ class Welcome extends Component {
                     <Col>
                         <h5 className="topic text-center">แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์</h5>
                         <p className="text-center" style={{color:'#eb5749'}}>เรียบเรียงโดย นายโรบอท.com</p>
-                        <p className="text-center" style={{fontSize:'12px', fontWeight:'300'}}>เปิดใช้งานจริงวันที่ 16 มกราคม 2564 </p>
                     </Col>
                 </Row>
                 
