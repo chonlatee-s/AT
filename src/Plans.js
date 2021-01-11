@@ -48,7 +48,7 @@ class Plans extends Component {
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ปรับปรุงข้อสอบให้ตรงกับปัจจุบัน</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ดาวน์โหลดเอกสารต่าง ๆ ฟรี</p>
                                         <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;ใช้งานได้ 2 ปี</p>
-                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;<span>พิเศษ สมัครเป็นคู่ลดเหลือ 69 บาท</span></p>
+                                        <p className="txtCard"><i className='far fa-check-circle'></i> &nbsp;<span>พิเศษ สมัครเป็นคู่ลดเหลือคนละ 69 บาท</span></p>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
