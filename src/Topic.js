@@ -25,7 +25,7 @@ class Topic extends Component {
                             <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบปฏิบัติการคอมพิวเตอร์</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบเลขฐาน</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> โครงสร้างข้อมูลและอัลกอริทึม</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> การเขียนโปรแกรมคอมพิวเตอร์ ภาษา C และ ภาษา Python</p>
+                            <p className="txtDetail"><i className='far fa-check-circle'></i> การเขียนโปรแกรมคอมพิวเตอร์</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> การวิเคราะห์และออกแบบระบบ</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบฐานข้อมูล</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> การใช้งานโปรแกรมคอมพิวเตอร์</p>
@@ -34,8 +34,9 @@ class Topic extends Component {
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีดิจิทัล</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> การคิดเชิงคำนวณ</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
+                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยี Internet of Things (IoT)</p>
                             <p></p>
-                            <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 1 มกราคม 2564</p>
+                            <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 12 มกราคม 2564</p>
                         </div>
                     </Col>
                 </Row>

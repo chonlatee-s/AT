@@ -29,7 +29,7 @@ class Download extends Component {
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีสารสนเทศและการสื่อสาร</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
                             <p></p>
-                            <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 1 มกราคม 2564</p>
+                            <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 12 มกราคม 2564</p>
                             <p className="txtDetail"><a href="https://drive.google.com/drive/folders/1FKL5nJ2hwifRDAB9mN2zmX-Wqfnj1Yp9?usp=sharing" target="_blank" rel="noreferrer">[ ดาวน์โหลด ]</a></p>
                         </div>
                     </Col>
