@@ -173,7 +173,25 @@ class Exam extends Component {
         this.state.examLists.forEach((item) => {
             if (item.answer === item.reply) result += 1
         })
-        this.setState({ score: result, waitResult: true, waitData: false })
+
+        const dataStore = this.props.stateFromStore
+        let qs = require('qs');
+        let data = {
+            userId: dataStore.id,
+            score: result
+        }
+        if (dataStore.plan !== '1') {
+            axios.post(`${window.location.origin}/sentLogExam.php`, qs.stringify(data))
+            // axios.post(`http://localhost/at_exam/sentLogExam.php`, qs.stringify(data))
+                .then((res) => {
+                    this.setState({ score: result, waitResult: true, waitData: false })
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        }else {
+            this.setState({ score: result, waitResult: true, waitData: false })
+        }
     }
 /////////////////////////////////////// END FUNCTION ////////////////////////////////////////////////////////////
     render() {

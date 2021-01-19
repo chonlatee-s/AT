@@ -14,6 +14,7 @@ class Register extends Component {
         const base64 = require('base-64');
         const utf8 = require('utf8');
         let dataLogin = {
+            id:'',
             name: '',
             IsLoggedIn: '',
             plan: ''
@@ -26,6 +27,7 @@ class Register extends Component {
         .then((res) => {
             if(res.data===false) this.setState({showStatusLogin:true}) // Login ไม่สำเร็จ
             else {
+                dataLogin.id = res.data.id
                 dataLogin.name = res.data.name
                 dataLogin.IsLoggedIn = true
                 dataLogin.plan = res.data.plan
@@ -47,7 +49,6 @@ class Register extends Component {
     }
 
     render() {
-
         const dataStore = this.props.stateFromStore
         if(dataStore.check_date_exp === '1') return <Redirect to='/Expire' /> // ถ้าหมดอายุ
         else {

@@ -12,6 +12,7 @@ import Topic from './Topic';
 import Error from './Error';
 import Expire from './Expire';
 import Download from './Download';
+import LogExam from './LogExam';
 
 //redux
 import { createStore } from 'redux'
@@ -36,6 +37,7 @@ function App() {
           <Route exact={true} path="/Topic" component={Topic} />
           <Route exact={true} path="/Expire" component={Expire} />
           <Route exact={true} path="/Download" component={Download} />
+          <Route exact={true} path="/LogExam" component={LogExam} />
           <Route component={Error} />
         </Switch>
         <Bar/>

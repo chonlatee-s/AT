@@ -1,10 +1,9 @@
 const initialState = {
     data: {
-        UserId:'',
-        Name:'',
-        Profile:'',
+        id:'',
+        name:'',
+        plan:'',
         IsLoggedIn:false,
-        type:''
     }
 }
 

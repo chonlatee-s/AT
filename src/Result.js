@@ -17,7 +17,10 @@ class Result extends Component {
                 <Row>
                     <Col md="12" lg="3" className="text-center mb-2">
                     <div>
-                        <div style={{fontSize:'12px', fontWeight:'300', paddingBottom:'5px', paddingTop:'2px'}}>{dataStore.name}</div>
+                        <div style={{fontSize:'12px', fontWeight:'300', paddingBottom:'5px', paddingTop:'2px'}}>
+                            {dataStore.name}&nbsp;&nbsp;
+                            {dataStore.plan !== '1' ? <NavLink to="/LogExam"><span style={{color:'#eb5749'}}>:: ดูสถิติ ::</span></NavLink> :null}
+                        </div>
                     </div>
                     <Alert style={{backgroundColor:"#697f69"}}>
                         <p style={{margin:"0px", fontSize:"21px", color:"#fff"}}>คะแนนรวม</p>
