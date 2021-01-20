@@ -1,9 +1,7 @@
 const initialState = {
     data: {
-        id:'',
         name:'',
-        plan:'',
-        IsLoggedIn:false,
+        IsLoggedIn:false
     }
 }
 

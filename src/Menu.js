@@ -7,7 +7,7 @@ class Menu extends Component {
         return(
         <nav className="navbar fixed-top navbar-expand-sm navbar-light" style={{backgroundColor: "#ffffff"}}>
             <div className="container">
-                <NavLink to="/" className="navbar-brand" ><img src={logo} style={{width:"75px"}} alt="นายโรบอท"/><span className="logo_brand"></span></NavLink>
+                <a href="https://นายโรบอท.com" className="navbar-brand" ><img src={logo} style={{width:"75px"}} alt="นายโรบอท"/><span className="logo_brand"></span></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,9 +15,6 @@ class Menu extends Component {
                     <div className="navbar-nav ml-md-auto mb-2" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <NavLink to="/RegisterAndTest">
                             <Button variant="outline-info" className="btn btnFull mt-2">ทำข้อสอบ</Button>
-                        </NavLink>
-                        <NavLink to="/PlansAndContact">
-                            <Button variant="info" className="btn btnFull mt-2" style={{marginRight:"10px"}}> รับสิทธิ์เข้าใช้งาน</Button>
                         </NavLink>
                         <NavLink to="/Download">
                             <i className='fas fa-download showIcon' style={{fontSize:"30px", margin:"9px 0px 15px 15px", color:"#697f69"}}></i>

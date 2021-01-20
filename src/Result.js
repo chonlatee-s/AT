@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Container, Row, Col, ProgressBar, Alert, Image, Badge} from 'react-bootstrap'
+import {Container, Row, Col, ProgressBar, Alert, Image} from 'react-bootstrap'
 import { connect } from 'react-redux'
 import {NavLink} from 'react-router-dom';
 
@@ -18,8 +18,7 @@ class Result extends Component {
                     <Col md="12" lg="3" className="text-center mb-2">
                     <div>
                         <div style={{fontSize:'12px', fontWeight:'300', paddingBottom:'5px', paddingTop:'2px'}}>
-                            {dataStore.name}&nbsp;&nbsp;
-                            {dataStore.plan !== '1' ? <NavLink to="/LogExam"><span style={{color:'#eb5749'}}>:: ดูสถิติ ::</span></NavLink> :null}
+                            {dataStore.name}
                         </div>
                     </div>
                     <Alert style={{backgroundColor:"#697f69"}}>
@@ -27,13 +26,6 @@ class Result extends Component {
                         <p style={{fontSize:"60px", margin:"0px", color:"#fff"}}>{`${this.props.score}/${this.props.result.length}`}</p>
                         <ProgressBar striped variant="info" now={(this.props.score*100)/this.props.result.length} label={`${Math.round((this.props.score*100)/this.props.result.length)}%`} style={{height: "10px"}}/>
                     </Alert>
-                        <h6><Badge variant="success"> {dataStore.plan === '1' ? 'คุณใช้งานแบบที่ 1 ทดลองใช้ฟรี' : dataStore.plan === '2' ? 'คุณใช้งานแบบที่ 2 อุ่นใจ' : 'คุณใช้งานแบบที่ 3 คู่ใจ' } </Badge></h6>
-                        <NavLink to="/PlansAndContact"><p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px", color:'#e7400d'}}> {dataStore.plan === '1' ? 'รับสิทธิ์เพิ่มเติม' : null} </p></NavLink>
-                        <p style={{fontWeight:'300', marginTop:'0px', fontSize:"12px",color:'#627498'}}>
-                            {
-                                dataStore.plan !== '1' ? dataStore.date_exp : null
-                            }
-                        </p>
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">

@@ -18,7 +18,7 @@ class Download extends Component {
                     </Col>
                     <Col md="12" lg="9">
                         <div className="txtProfile">
-                            <p className="txtHead">แบ่งปันข้อสอบ</p>
+                            <p className="txtHead">แบ่งปันข้อสอบ (บางส่วน)</p>
                             <p></p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> สถาปัตยกรรมคอมพิวเตอร์</p>
                             <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบเครือข่ายคอมพิวเตอร์</p>

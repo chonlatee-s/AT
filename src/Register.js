@@ -2,58 +2,20 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Alert  } from 'react-bootstrap';
 import {NavLink, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux'
-import axios from 'axios'
 
 class Register extends Component {
 
-    state = {
-        showStatusLogin : false
-    }
-
-    checkLogin = () => {
-        const base64 = require('base-64');
-        const utf8 = require('utf8');
-        let dataLogin = {
-            id:'',
-            name: '',
-            IsLoggedIn: '',
-            plan: ''
-        }
-        const email = document.getElementById('email').value
-        const password = base64.encode(utf8.encode(document.getElementById('password').value))
-
-        // axios.get(`http://localhost/at_exam/checkUser.php?email=${email}&password=${password}`) 
-        axios.get(`${window.location.origin}/checkUser.php?email=${email}&password=${password}`)
-        .then((res) => {
-            if(res.data===false) this.setState({showStatusLogin:true}) // Login ไม่สำเร็จ
-            else {
-                dataLogin.id = res.data.id
-                dataLogin.name = res.data.name
-                dataLogin.IsLoggedIn = true
-                dataLogin.plan = res.data.plan
-                dataLogin.check_date_exp = res.data.check_date_exp
-                dataLogin.date_exp = `ใช้งานได้ถึง ${res.data.day}-${res.data.month}-${Number(res.data.year)+543}`
-                this.props.dispatchFromStore(dataLogin)
-            }
-        }).catch((err) => {
-            console.log(err)
-        })
-    }
     guestFree = () => {
         let dataLogin = {
             name: 'ผู้ใช้ทั่วไป',
-            IsLoggedIn: true,
-            plan: '1'
+            IsLoggedIn: true
         }
         this.props.dispatchFromStore(dataLogin)
     }
 
     render() {
         const dataStore = this.props.stateFromStore
-        if(dataStore.check_date_exp === '1') return <Redirect to='/Expire' /> // ถ้าหมดอายุ
-        else {
-            if(dataStore.IsLoggedIn) return <Redirect to='/Exam' />
-        }
+        if(dataStore.IsLoggedIn) return <Redirect to='/Exam' />
 
         return (
             <Container className="containBox">
@@ -66,19 +28,14 @@ class Register extends Component {
                             boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.10)",
                             borderRadius: "5px"
                         }}>
-                            <h5 className="topic2">เข้าสู่ระบบเพื่อทำข้อสอบ</h5>
-                            {
-                                (this.state.showStatusLogin) ? <p style={{margin:'10px', color:"#eb5749", fontWeight:"500", fontSize:"14px"}}> ไม่พบข้อมูล ตรวจสอบอีเมล และรหัสผ่านอีกครั้ง </p> : null
-                            }
-                            <input type="text" placeholder="อีเมล" className="login mb-2" id="email"/>
-                            <input type="password" placeholder="รหัสผ่าน (ลืมรหัสผ่าน ติดต่อแอดมิน)" className="login mb-2" id="password"/>
-                            <input type="button" className="btnLogin" value="เข้าสู่ระบบ" onClick={this.checkLogin}/>
-                            <p className="txtLine"> &nbsp;&nbsp; หรือ &nbsp;&nbsp; </p>
-                            <input type="button" className="btnLoginFree" value="ทดลองใช้ฟรี" onClick={this.guestFree}/>
+                            <h5 className="topic2">สอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์ (ฟรี)</h5>
+                            <NavLink to="/Coffee">
+                                <input type="button" className="btnLogin" value="เลี้ยงกาแฟแอดมิน"/>
+                            </NavLink>
+                            <hr/>
+                            <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>
                         </Alert>
                         <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <NavLink to="/PlansAndContact"><span style={{fontSize:'12px', fontWeight:'300'}}>รับสิทธิ์เข้าใช้งาน</span></NavLink>
                     </Col>
                 </Row>
             </Container>

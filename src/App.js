@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Menu from './Menu';
 import Home from './Home';
 import Register from './Register';
-import Plans from './Plans';
 import Exam from './Exam';
 import Bar from './Bar';
 import AboutMe from './AboutMe';
@@ -13,6 +12,7 @@ import Error from './Error';
 import Expire from './Expire';
 import Download from './Download';
 import LogExam from './LogExam';
+import Coffee from './Coffee';
 
 //redux
 import { createStore } from 'redux'
@@ -29,7 +29,6 @@ function App() {
       <Menu/>
         <Switch>
           <Route exact={true} path="/" component={Home} />
-          <Route exact={true} path="/PlansAndContact" component={Plans} />
           <Route exact={true} path="/RegisterAndTest" component={Register} />
           <Route exact={true} path="/Exam" component={Exam} />
           <Route exact={true} path="/AboutMe" component={AboutMe} />
@@ -38,6 +37,7 @@ function App() {
           <Route exact={true} path="/Expire" component={Expire} />
           <Route exact={true} path="/Download" component={Download} />
           <Route exact={true} path="/LogExam" component={LogExam} />
+          <Route exact={true} path="/Coffee" component={Coffee} />
           <Route component={Error} />
         </Switch>
         <Bar/>

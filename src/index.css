@@ -75,28 +75,6 @@ a:active {
   color: #5b785b;
 }
 
-.txtLine {
-  color: #697f69;
-  position: relative;
-  font-size: 14px;
-  z-index: 1;
-  overflow: hidden;
-  text-align: center;
-  margin-top: 12px;
-}
-.txtLine:before, .txtLine:after {
-  position: absolute;
-  top: 51%;
-  overflow: hidden;
-  width: 50%;
-  height: 0.1px;
-  content: '\a0';
-  background-color: #e4d6c0;
-}
-.txtLine:before {
-  margin-left: -50%;
-  text-align: right;
-}
 .color {
   background-color: #ccc;
 }
