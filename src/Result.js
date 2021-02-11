@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {Container, Row, Col, ProgressBar, Alert, Image} from 'react-bootstrap'
 import { connect } from 'react-redux'
-import {NavLink} from 'react-router-dom';
 
 class Result extends Component {
     

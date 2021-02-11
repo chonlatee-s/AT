@@ -13,6 +13,9 @@ class Menu extends Component {
                 </button>
                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
                     <div className="navbar-nav ml-md-auto mb-2" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <a href ="https://xn--o3cdd5af5d5a4j.com/contents/">
+                            <Button variant="outline-info" className="btn btnFull mt-2">คลังความรู้</Button>
+                        </a>
                         <NavLink to="/RegisterAndTest">
                             <Button variant="outline-info" className="btn btnFull mt-2">ทำข้อสอบ</Button>
                         </NavLink>

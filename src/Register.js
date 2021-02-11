@@ -29,9 +29,10 @@ class Register extends Component {
                             borderRadius: "5px"
                         }}>
                             <h5 className="topic2">สอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์ (ฟรี)</h5>
-                            <NavLink to="/Coffee">
-                                <input type="button" className="btnLogin" value="เลี้ยงกาแฟแอดมิน"/>
-                            </NavLink>
+                            <Alert variant="info">
+                                <p style={{fontSize:'16px', marginBottom:'5px'}}>ใครใจดีจะเลี้ยงกาแฟแอดมินก็ไม่ว่ากันครับ :) </p>
+                                <p style={{fontSize:'12px', margin:'0px'}}> ธ.กรุงไทย 317-0-125591 ชลธี สินสาตร์ หรือพร้อมเพย์ 082 781 8941</p>
+                            </Alert>
                             <hr/>
                             <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>
                         </Alert>
