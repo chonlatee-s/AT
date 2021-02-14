@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Alert  } from 'react-bootstrap';
+import { Container, Row, Col, Alert, Button  } from 'react-bootstrap';
 import {NavLink, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux'
+import bannerApp from './img/bannerApp.png';
 
 class Register extends Component {
 
@@ -20,6 +21,13 @@ class Register extends Component {
         return (
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
+                    <Col> <img src={bannerApp} style={{width:"350px"}} alt="แอปพคิเคชัน นายโรบอท"/></Col>
+                </Row>
+                <Row className="justify-content-md-center text-center">
+                    <Col md={5}><Button variant="info" className="btn mt-2" size="sm">ดาวน์โหลด</Button></Col>
+                </Row>
+                <br/>
+                <Row className="justify-content-md-center text-center">
                     <Col md={5}>
                         <p/>
                         <Alert style={{
@@ -28,10 +36,10 @@ class Register extends Component {
                             boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.10)",
                             borderRadius: "5px"
                         }}>
-                            <h5 className="topic2">สอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์ (ฟรี)</h5>
+                            <h5 className="topic2">สอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์</h5>
                             <Alert variant="info">
-                                <p style={{fontSize:'16px', marginBottom:'5px'}}>ใครใจดีจะเลี้ยงกาแฟแอดมินก็ไม่ว่ากันครับ :) </p>
-                                <p style={{fontSize:'12px', margin:'0px'}}> ธ.กรุงไทย 317-0-125591 ชลธี สินสาตร์ หรือพร้อมเพย์ 082 781 8941</p>
+                                <p style={{fontSize:'16px', marginBottom:'5px'}}>สนับสนุนค่ากาแฟแอดมิน :)</p>
+                                <p style={{fontSize:'12px', margin:'0px'}}>พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
                             </Alert>
                             <hr/>
                             <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>
