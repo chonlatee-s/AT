@@ -27,7 +27,7 @@ class Promotion extends Component {
                                     จากทุกสังกัด นอกจากนี้ ข้อสอบมีการปรับปรุง แก้ไข เพิ่มเติมอย่างต่อเนื่อง 
                                     เพื่อให้ทันต่อสถานการณ์ปัจจุบัน ใช้งานง่าย ดาวน์โหลดได้แล้วที่ Google Play
                                 </p>
-                                <Button variant="info" size="sm" className="btnFull mt-2"> ดาวน์โหลดแอปพลิเคชัน</Button>
+                                <Button variant="info" size="sm" className="btnFull" style={{marginLeft:'0px'}}> ดาวน์โหลดแอปพลิเคชัน</Button>
                             </Col>
                         </Row>
                     </Col>
