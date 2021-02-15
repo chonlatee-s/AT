@@ -38,7 +38,7 @@ body {
 }
 .cardPlan1{
   color: #fff;
-  background-color: #819d81;
+  background-color: #697f69;
 }
 .cardPlan2{
   color: #fff;
@@ -46,7 +46,7 @@ body {
 }
 .cardPlan3{
   color: #fff;
-  background-color: #5b785b;
+  background-color: #697f69;
 }
 
 .topic{
@@ -56,6 +56,7 @@ body {
   font-size: 21px;
 }
 .topic2{
+  font-size: 18px;
   color: #5b785b;
   margin-bottom:20px;
   font-weight: 300;
@@ -180,7 +181,17 @@ a:active {
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
 }
-
+.txtRobot{
+  margin-top:45px; 
+  font-size: 24px; 
+  font-weight: 500;
+  color:'#627498';
+}
+.txtTitleApp{
+  font-size: 14px; 
+  font-weight: 300;
+  color:'#627498';
+}
 @media (max-width: 767.98px) { 
   .btnFull {width: 100%}
   .showTextMenu{

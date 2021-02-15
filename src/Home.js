@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import Promotion from './Promotion';
 import Register from './Register';
-
 
 class Home extends Component {
     render() {
         return(
-            <Register/>
+            <div>
+                <Promotion/>
+                <Register/>
+                <br/>
+            </div>
         );
     }
 }

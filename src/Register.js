@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Alert, Button  } from 'react-bootstrap';
+import { Container, Row, Col, Alert } from 'react-bootstrap';
 import {NavLink, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux'
-import bannerApp from './img/bannerApp2.png';
 
 class Register extends Component {
 
@@ -22,35 +21,21 @@ class Register extends Component {
             <Container className="containBox">
                 <Row className="justify-content-md-center text-center">
                     <Col md={6}>
-                        <Row className="justify-content-md-center text-center">
-                            <Col> 
-                                <a href="https://google.co.th">
-                                    <img src={bannerApp} style={{width:"350px"}} alt="แอปพคิเคชัน นายโรบอท"/>
-                                </a>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col md={6}>
-                        <Row className="justify-content-md-center text-center">
-                            <Col>
-                                <p/>
-                                <Alert style={{
-                                    backgroundColor:"#f6fff6",
-                                    padding: "12px",
-                                    boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.10)",
-                                    borderRadius: "5px"
-                                }}>
-                                    <h5 className="topic2">สอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์</h5>
-                                    <Alert variant="info">
-                                        <p style={{fontSize:'16px', marginBottom:'5px'}}>สนับสนุนค่ากาแฟแอดมิน :)</p>
-                                        <p style={{fontSize:'12px', margin:'0px'}}>พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
-                                    </Alert>
-                                    <hr/>
-                                    <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>
-                                </Alert>
-                                <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
-                            </Col>
-                        </Row>
+                        <Alert style={{
+                            backgroundColor:"#f6fff6",
+                            padding: "12px",
+                            boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.10)",
+                            borderRadius: "5px"
+                        }}>
+                            <p className="topic2">แนวข้อสอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์</p>
+                            <Alert variant="info">
+                                <p style={{fontSize:'16px', marginBottom:'5px'}}>สนับสนุนค่ากาแฟแอดมิน :)</p>
+                                <p style={{fontSize:'12px', margin:'0px'}}>พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
+                            </Alert>
+                            <hr/>
+                            <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>
+                        </Alert>
+                        <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
                     </Col>
                 </Row>
             </Container>
