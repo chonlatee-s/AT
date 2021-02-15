@@ -20,21 +20,66 @@ class Topic extends Component {
                         <div className="txtProfile">
                             <p className="txtHead">เนื้อหาที่นำมาออกข้อสอบ ปรับปรุงตามสถานการณ์ปัจจุบัน</p>
                             <p></p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> สถาปัตยกรรมคอมพิวเตอร์</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบเครือข่ายคอมพิวเตอร์</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบปฏิบัติการคอมพิวเตอร์</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบเลขฐาน</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> โครงสร้างข้อมูลและอัลกอริทึม</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> การเขียนโปรแกรมคอมพิวเตอร์</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> การวิเคราะห์และออกแบบระบบ</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> ระบบฐานข้อมูล</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> การใช้งานโปรแกรมคอมพิวเตอร์</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> กฏหมายที่เกี่ยวข้องกับคอมพิวเตอร์</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีสารสนเทศและการสื่อสาร</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีดิจิทัล</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> การคิดเชิงคำนวณ</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
-                            <p className="txtDetail"><i className='far fa-check-circle'></i> เทคโนโลยี Internet of Things (IoT)</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> สถาปัตยกรรมคอมพิวเตอร์</p>
+                            <p className="txtDetail">                                
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> ระบบเครือข่ายคอมพิวเตอร์</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> ระบบปฏิบัติการคอมพิวเตอร์</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> ระบบเลขฐาน</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> โครงสร้างข้อมูลและอัลกอริทึม</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> การเขียนโปรแกรมคอมพิวเตอร์</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> การวิเคราะห์และออกแบบระบบ</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> ระบบฐานข้อมูล</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> การใช้งานโปรแกรมคอมพิวเตอร์</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> กฏหมายที่เกี่ยวข้องกับคอมพิวเตอร์</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> เทคโนโลยีสารสนเทศและการสื่อสาร</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> เทคโนโลยีดิจิทัล</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> การคิดเชิงคำนวณ</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
+                            <p className="txtDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-record" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                                </svg> เทคโนโลยี Internet of Things (IoT)</p>
                             <p></p>
                             <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 14 กุมภาพันธ์ 2564</p>
                         </div>
