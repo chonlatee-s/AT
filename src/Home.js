@@ -7,7 +7,9 @@ class Home extends Component {
         return(
             <div>
                 <Promotion/>
+                <div style={{backgroundColor:'#d1ecf1', paddingTop:'1px', paddingBottom:'35px', height:'100%'}}>
                 <Register/>
+                </div>
                 <br/>
             </div>
         );

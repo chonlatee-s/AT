@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardDeck, Button} from 'react-bootstrap';
-import bannerApp from './img/bannerApp.png';
+import bannerApp from './img/bannerApp2.png';
 
 class Promotion extends Component {
     render() {
@@ -20,7 +20,7 @@ class Promotion extends Component {
                         <Row>
                             <Col> 
                                 <p className="txtRobot" style={{color:'#627498'}}>แอปพลิเคชัน นายโรบอท</p>
-                                <p className="txtTitleApp" style={{color:'#627498'}}> 
+                                <p className="txtTitleApp" style={{color:'#627498', paddingRight:'20px'}}> 
                                     แอปพลิเคชันนี้จัดทำขึ้นเพื่อให้ผู้ที่กำลังเตรียมตัวสอบครูผู้ช่วย หรือข้าราชการอื่น ๆ 
                                     ที่เกี่ยวข้องกับสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ 
                                     ข้อสอบเหล่านี้ได้ถูกรวบรวมมาจากผู้ที่มีประสบการณ์การสอบมานับครั้งไม่ถ้วน 
@@ -37,7 +37,7 @@ class Promotion extends Component {
                         <Row>
                             <Col mx="auto">
                                 <br/><br/>
-                                <p className="txtRobot" style={{color:'#627498'}}> บริการเพื่อคุณ </p>
+                                <p className="txtRobot" style={{color:'#627498', marginTop:'50px'}}> บริการเพื่อคุณ </p>
                                 <CardDeck>
                                     <Card className="cardPlan1">
                                         <Card.Body>

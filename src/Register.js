@@ -28,9 +28,9 @@ class Register extends Component {
                             borderRadius: "5px"
                         }}>
                             <p className="topic2">แนวข้อสอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์</p>
-                            <Alert variant="info">
-                                <p style={{fontSize:'16px', marginBottom:'5px'}}>สนับสนุนค่ากาแฟแอดมิน :)</p>
-                                <p style={{fontSize:'12px', margin:'0px'}}>พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
+                            <Alert style={{backgroundColor:'#f8f2e8'}}>
+                                <p style={{fontSize:'16px', marginBottom:'5px', color:'#b28644'}}>สนับสนุนค่ากาแฟแอดมิน :)</p>
+                                <p style={{fontSize:'12px', margin:'0px', color:'#b28644'}}>พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
                             </Alert>
                             <hr/>
                             <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>
