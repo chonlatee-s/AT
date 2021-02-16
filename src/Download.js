@@ -61,7 +61,6 @@ class Download extends Component {
                                 <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
                                 </svg> เทคโนโลยีปัญญาประดิษฐ์และข้อมูลมหัต</p>
                             <p></p>
-                            <p className="txtDetail">ปรับปรุงข้อสอบล่าสุด วันที่ 14 กุมภาพันธ์ 2564</p>
                             <p className="txtDetail"><a href="https://drive.google.com/drive/folders/1FKL5nJ2hwifRDAB9mN2zmX-Wqfnj1Yp9?usp=sharing" target="_blank" rel="noreferrer">[ ดาวน์โหลด ]</a></p>
                         </div>
                     </Col>
