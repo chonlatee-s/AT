@@ -5,12 +5,12 @@ import bannerApp from './img/bannerApp2.png';
 class Promotion extends Component {
     render() {
         return (
-            <Container className="containBox">
+            <Container className="containPromotion">
                 <Row className="justify-content-md-center">
                     <Col md={6}>
                         <Row className="justify-content-md-center text-center">
                             <Col> 
-                                <a href="https://google.co.th">
+                                <a href="https://play.google.com/store/apps/details?id=com.robotApp.robot">
                                     <img src={bannerApp} style={{width:"350px"}} alt="แอปพคิเคชัน นายโรบอท"/>
                                 </a>
                             </Col>
@@ -27,7 +27,7 @@ class Promotion extends Component {
                                     จากทุกสังกัด นอกจากนี้ ข้อสอบมีการปรับปรุง แก้ไข เพิ่มเติมอย่างต่อเนื่อง 
                                     เพื่อให้ทันต่อสถานการณ์ปัจจุบัน ใช้งานง่าย ดาวน์โหลดได้แล้วที่ Google Play
                                 </p>
-                                <Button variant="info" size="sm" className="btnFull" style={{marginLeft:'0px'}}> ดาวน์โหลดแอปพลิเคชัน</Button>
+                                <a href="https://play.google.com/store/apps/details?id=com.robotApp.robot"><Button variant="info" size="sm" className="btnFull" style={{marginLeft:'0px'}}> ดาวน์โหลดแอปพลิเคชัน</Button></a>
                             </Col>
                         </Row>
                     </Col>
