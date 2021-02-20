@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Alert } from 'react-bootstrap';
 import {NavLink, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux'
+import Ads from './Ads';
 
 class Register extends Component {
 
@@ -38,6 +39,7 @@ class Register extends Component {
                         <NavLink to="/Policy"><span style={{fontSize:'12px', fontWeight:'300'}}>ข้อตกลงการใช้งาน</span></NavLink>
                     </Col>
                 </Row>
+                <Ads/>
             </Container>
         );
     }
