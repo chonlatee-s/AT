@@ -28,10 +28,10 @@ class Register extends Component {
                             boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.10)",
                             borderRadius: "5px"
                         }}>
-                            <p className="topic2">แนวข้อสอบครูผู้ช่วย วิชาเอกคอมพิวเตอร์</p>
+                            <p className="topic2">แนวข้อสอบวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</p>
                             <Alert style={{backgroundColor:'#f8f2e8'}}>
-                                <p style={{fontSize:'16px', marginBottom:'5px', color:'#b28644'}}>ร่วมเป็นกำลังใจ และสนับสนุนนักพัฒนา :)</p>
-                                <p style={{fontSize:'12px', margin:'0px', color:'#b28644'}}>ได้ที่ พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
+                                <p style={{fontSize:'16px', marginBottom:'5px', color:'#b28644'}}>เลี้ยงชานมไข่มุกแอดมิน :)</p>
+                                <p style={{fontSize:'12px', margin:'0px', color:'#b28644'}}>พร้อมเพย์ 082 781 8941 ชลธี สินสาตร์</p>
                             </Alert>
                             <hr/>
                             <input type="button" className="btnLoginFree" value="ทำข้อสอบ" onClick={this.guestFree}/>

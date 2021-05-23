@@ -7,7 +7,7 @@ function Bar() {
             <hr style={{marginTop:"0px"}}/>
             <Row>
                 <Col>
-                    <p style={{margin:"0px"}}>แนวข้อสอบครูผู้ช่วย เอกคอมพิวเตอร์</p>
+                    <p style={{margin:"0px"}}>แนวข้อสอบวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</p>
                     <p>สงวนลิขสิทธิ์ © 2564 นายโรบอท.com</p>
                 </Col>
             </Row>

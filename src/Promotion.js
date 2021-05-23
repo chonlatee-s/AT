@@ -21,11 +21,11 @@ class Promotion extends Component {
                             <Col> 
                                 <p className="txtRobot" style={{color:'#627498'}}>แอปพลิเคชัน นายโรบอท</p>
                                 <p className="txtTitleApp" style={{color:'#627498', paddingRight:'20px'}}> 
-                                    แอปพลิเคชันนี้จัดทำขึ้นเพื่อให้ผู้ที่กำลังเตรียมตัวสอบครูผู้ช่วย หรือข้าราชการอื่น ๆ 
-                                    ที่เกี่ยวข้องกับสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ 
+                                    แอปพลิเคชันนี้จัดทำขึ้นเพื่อให้ผู้ที่กำลังเตรียมตัวสอบเข้าทำงานในหน่วยงานราชการ 
+                                    หรือรัฐวิสาหกิจ ที่เกี่ยวข้องกับสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ 
                                     ข้อสอบเหล่านี้ได้ถูกรวบรวมมาจากผู้ที่มีประสบการณ์การสอบมานับครั้งไม่ถ้วน 
-                                    จากทุกสังกัด นอกจากนี้ ข้อสอบมีการปรับปรุง แก้ไข เพิ่มเติมอย่างต่อเนื่อง 
-                                    เพื่อให้ทันต่อสถานการณ์ปัจจุบัน ใช้งานง่าย ดาวน์โหลดได้แล้วที่ Google Play
+                                    จากหลากหลายสังกัด นอกจากนี้ ข้อสอบมีการปรับปรุง แก้ไข เพิ่มเติมอย่างต่อเนื่อง 
+                                    เพื่อให้ทันต่อสถานการณ์ปัจจุบัน ดาวน์โหลดได้ฟรีที่ Google Play
                                 </p>
                                 <a href="https://play.google.com/store/apps/details?id=com.robotApp.robot"><Button variant="info" size="sm" className="btnFull" style={{marginLeft:'0px'}}> ดาวน์โหลดแอปพลิเคชัน</Button></a>
                             </Col>
@@ -50,7 +50,7 @@ class Promotion extends Component {
                                             </div>
                                             <br/>
                                             <Card.Title className="txtCardHead">ข้อสอบมากกว่า 500 ข้อ</Card.Title>
-                                            <Card.Text><p className="txtCard">มีข้อสอบจริงให้ลองทำ</p></Card.Text>
+                                            <Card.Text><p className="txtCard">คัดเฉพาะเนื้อหาที่สำคัญ</p></Card.Text>
                                         </Card.Body>
                                     </Card>
                                     <Card className="cardPlan2">
