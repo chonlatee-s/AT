@@ -4,12 +4,13 @@ import axios from 'axios'
 
 class News extends Component {
     state = {
-        txt : "ถิ่นไทยในป่ากว้าง ห่างไกล แสงอารยธรรมใด ส่องบ้าง เห็นเทียนอยู่รำไร เล่มหนึ่ง ครูนั่นแหละอาจสร้าง เสกให้ชัชวาล [ ม.ล.ปิ่น มาลากุล ]"
+        txt : "ถิ่นไทยในป่ากว้าง ห่างไกล แสงอารยธรรมใด ส่องบ้าง เห็นเทียนอยู่รำไร เล่มหนึ่ง ครูนั่นแหละอาจสร้าง เสกให้ชัชวาล [ ม.ล.ปิ่น มาลากุล ]",
+        link: "#"
     }
     getNews = () => {
         axios.get(`${window.location.origin}/getNews.php`)
             .then((res) => {
-                this.setState({txt:res.data.news})
+                this.setState({txt:res.data.news, link:res.data.link})
             })
             .catch((err) => {
                 console.log(err)
@@ -31,9 +32,11 @@ class News extends Component {
                         padding:'10px', 
                         backgroundColor:'#f9f7f3',
                         boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.10)",
-                        borderRadius: "5px"
+                        borderRadius: "5px",
+                        fontSize:"16px",
+                        marginBottom:'70px'
                         }}>
-                            {`" ${this.state.txt} "`}
+                            <a href={this.state.link} style={{color:'#b7996c'}}>{`${this.state.txt}`}</a>
                         </p>
                     </Col>
                 </Row>
